@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B:GEZI-Specialists and Doctors</title>
+    <link rel="stylesheet" href="styles/style.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+        crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+        crossorigin=""> </script>
+    <style>
+        body {
+            background-color: #333; /* Dark grey background */
+            color: #f8cb26; /* Text color */
+        }
+        h1, h2, h3 {
+            color: #f8cb26; /* Ensure headers also use the text color */
+        }
+        .nav-button {
+            background-color: #444; /* Optional: Button background color */
+            color: #f8cb26; /* Button text color */
+            border: 1px solid #f8cb26;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        .nav-button:hover {
+            background-color: #555; /* Optional: Button hover effect */
+        }
+        #scrollToTopBtn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: none;
+            background-color: #444;
+            color: #f8cb26;
+            border: 1px solid #f8cb26;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        #scrollToTopBtn:hover {
+            background-color: #555;
+        }
+        #banner {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #f8cb26;
+            color: #333;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 1.2em;
+            font-weight: bold;
+            z-index: 1000;
+        }
+        body {
+            padding-top: 50px; /* To prevent content from being hidden under the banner */
+        }
+    </style>
+</head>
+
+<button id="scrollToTopBtn" onclick="scrollToTop()">Top</button>
+<script>
+    const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+    window.onscroll = function() {
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            scrollToTopBtn.style.display = "block";
+        } else {
+            scrollToTopBtn.style.display = "none";
+        }
+    };
+
+    function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+</script>
+    <body>
+        <div id="banner">Coming Soon</div>
+        <header> 
+            <hr style="border: 1px solid #f8cb26; width: 80%; margin: 50px auto;">
+            <h1 style="text-align: center; font-size: 4em;">GEZI - Boston</h1>
+            <h2 style="text-align: center; font-size: 2em;">Specialists and Doctors List</h2>
+            <hr style="border: 1px solid #f8cb26; width: 80%; margin: 20px auto;">
+        </header>
+
+    <div style="text-align: center; margin-top: 20px;">
+        <button onclick="window.location.href='mainPage_boston.html'" class="nav-button">Home</button>
+        <button onclick="window.location.href='disorders_boston.html'" class="nav-button">Disorders and Disabilities</button>
+        <button onclick="window.location.href='contact_boston.html'" class="nav-button">Contact Me</button>
+    </div>
+
+
+<main>
+    <h5 style="font-size: 1.2em; color: white;">ALLERGIST</h5>
+    <p>An Allergist is a specially trained physician to help manage and identify and diagnose allergies, asthma, or other immune system disorders.</p>
+    <p>More can be read at: <a href="https://www.aaaai.org/About/About-Allergists-Immunologists" target="_blank" rel="noopener noreferrer" style="color: white;">https://www.aaaai.org/About/About-Allergists-Immunologists</a></p>
+
+    <h5 style="font-size: 1.2em; color: white;">ASSISTIVE TECHNOLOGY SPECIALIST</h5>
+    <p>An Assistive Technology Specialist is someone who works with an Occupational Therapist with physical items such as a wheelchair that would assist someone with a disability.</p>
+    <p>More can be read at: <a href="https://tsengcollege.csun.edu/blog/assistive-technology-specialist-career-path" target="_blank" rel="noopener noreferrer" style="color: white;">https://tsengcollege.csun.edu/blog/assistive-technology-specialist-career-path</a></p>
+
+    <h5 style="font-size: 1.2em; color: white;">AUDIOLOGIST</h5>
+    <p>Audiologists diagnose, assess, and manage disorders regarding hearing, balance, and other neurological abnormalities.</p>
+    <p>More can be read at: <a href="https://www.hopkinsmedicine.org/health/conditions-and-diseases/hearing-loss/what-is-an-audiologist" target="_blank" rel="noopener noreferrer" style="color: white;">https://www.hopkinsmedicine.org/health/conditions-and-diseases/hearing-loss/what-is-an-audiologist</a></p>
+
+    <h5 style="font-size: 1.2em; color: white;">AUGMENTATIVE COMMUNICATION SPECIALIST</h5>
+    <p>An Augmentative Communication Specialist assists a Speech Language Pathologist implement strategies and identify alternate methods of communication with those with disabilities.</p>
+    <p>More can be read at: <a href="https://www.asha.org/practice-portal/professional-issues/augmentative-and-alternative-communication/" target="_blank" rel="noopener noreferrer" style="color: white;">https://www.asha.org/practice-portal/professional-issues/augmentative-and-alternative-communication/</a></p>
+
+    <h5 style="font-size: 1.2em; color: white;">BRAILLE TEACHER</h5>
+    <p>A braille teacher is someone who teaches the blind or visually impaired Braille.</p>
+    <p>More can be read at: <a href="https://www.perkins.org/resource/teaching-braille-reading-writing/" target="_blank" rel="noopener noreferrer" style="color: white;">https://www.perkins.org/resource/teaching-braille-reading-writing/</a></p>
+
+    <h5 style="font-size: 1.2em; color: white;">DEAF/HARD OF HEARING TEACHER (DHH)</h5>
+    <p>A teacher of the deaf/hard of hearing assists the deaf/hard of hearing with academics and socializing.</p>
+    <p>More can be read at: <a href="https://www.zippia.com/teacher-of-the-deaf-hard-of-hearing-jobs/what-does-a-teacher-of-the-deaf-hard-of-hearing-do/" target="_blank" rel="noopener noreferrer" style="color: white;">https://www.zippia.com/teacher-of-the-deaf-hard-of-hearing-jobs/what-does-a-teacher-of-the-deaf-hard-of-hearing-do/</a></p>
+
+    <h5 style="font-size: 1.2em; color: white;">DEVELOPMENTAL PEDIATRICIAN</h5>
+    <p>A developmental pediatrician assesses, identifies, and helps a child with a developmental problem, such as a learning disorder or behavioral challenges.</p>
+    <p>More can be read at: <a href="https://www.healthychildren.org/English/family-life/health-management/pediatric-specialists/Pages/What-is-a-Developmental-Behavioral-Pediatrician.aspx" target="_blank" rel="noopener noreferrer" style="color: white;">https://www.healthychildren.org/English/family-life/health-management/pediatric-specialists/Pages/What-is-a-Developmental-Behavioral-Pediatrician.aspx</a></p>
+
+    <h5 style="font-size: 1.2em; color: white;">DEVELOPMENTAL PSYCHOLOGIST</h5>
+    <p>A Developmental Psychologist is someone who studies how people develop.</p>
+    <p>More can be read at: <a href="https://www.apa.org/education-career/guide/subfields/developmental" target="_blank" rel="noopener noreferrer" style="color: white;">https://www.apa.org/education-career/guide/subfields/developmental</a></p>
+
+    <h5 style="font-size: 1.2em; color: white;">DIETITIAN/NUTRITIONIST</h5>
+    <p>A Dietitian/Nutritionist helps someone balance their diet according to a patient’s needs.</p>
+    <p>More can be read at: <a href="https://www.cancer.gov/publications/dictionaries/cancer-terms/def/dietitian" target="_blank" rel="noopener noreferrer" style="color: white;">https://www.cancer.gov/publications/dictionaries/cancer-terms/def/dietitian</a></p>
+    
+    <h5 style="font-size: 1.2em; color: white;">EXECUTIVE FUNCTIONING SPECIALIST</h5>
+    <p>An Executive Functioning Specialist is someone who studies and helps implement strategies for executive functioning skills.</p>
+    <p>More can be read at: <a href="https://chadd.org/about-adhd/executive-function-skills/" target="_blank" rel="noopener noreferrer" style="color: white;">https://chadd.org/about-adhd/executive-function-skills/</a></p>
+
+    <h5 style="font-size: 1.2em; color: white;">GASTROENTEROLOGIST</h5>
+    <p>A gastroenterologist is a physician whose specialty is the intestinal tract and associated abdominal organs.</p>
+    <p>More can be read at: <a href="https://gi.org/patients/gi-health-and-disease/what-is-a-gastroenterologist/" target="_blank" rel="noopener noreferrer" style="color: white;">https://gi.org/patients/gi-health-and-disease/what-is-a-gastroenterologist/</a></p>
+
+    <h5 style="font-size: 1.2em; color: white;">GENETICIST</h5>
+    <p>A geneticist is an expert in heredity or atypical variations of inherited characteristics.</p>
+    <p>More can be read at: <a href="https://www.cancer.gov/publications/dictionaries/cancer-terms/def/geneticist" target="_blank" rel="noopener noreferrer" style="color: white;">https://www.cancer.gov/publications/dictionaries/cancer-terms/def/geneticist</a></p>
+
+    <h5 style="font-size: 1.2em; color: white;">HEMATOLOGIST</h5>
+    <p>A hematologist is a doctor that specializes in diagnosing and treating blood disorders.</p>
+    <p>More can be read at: <a href="https://www.cancer.gov/publications/dictionaries/cancer-terms/def/hematologist" target="_blank" rel="noopener noreferrer" style="color: white;">https://www.cancer.gov/publications/dictionaries/cancer-terms/def/hematologist</a></p>
+
+    <h5 style="font-size: 1.2em; color: white;">IMMUNOLOGIST</h5>
+    <p>Immunologists are research scientists that specialize in researching, analyzing, and treating disease processes that involve the immune system.</p>
+    <p>More can be read at: <a href="https://www.purdue.edu/science/careers/what_can_i_do_with_a_major/Career%20Pages/immunologist.html" target="_blank" rel="noopener noreferrer" style="color: white;">https://www.purdue.edu/science/careers/what_can_i_do_with_a_major/Career%20Pages/immunologist.html</a></p>
+
+    <h5 style="font-size: 1.2em; color: white;">LEARNING DISABILITY SPECIALIST</h5>
+    <p>A Learning Disability Specialist is someone who often has a Master’s Degree and works with people with learning disabilities to aid them with their education and developing strategies to overcome the limitations.</p>
+    <p>More can be read at: <a href="https://childmind.org/article/learning-specialists-at-a-glance/" target="_blank" rel="noopener noreferrer" style="color: white;">https://childmind.org/article/learning-specialists-at-a-glance/</a></p>
+
+    <h5 style="font-size: 1.2em; color: white;">MOBILITY SPECIALIST</h5>
+    <p>Mobility Specialists teach people with a visual impairment to move around safely and with confidence. In contrast to a Physical Therapist, Mobility Specialists focus primarily on people with visual impairment.</p>
+    <p>More can be read at: <a href="https://explorehealthcareers.org/career/allied-health-professions/orientation-mobility-specialist/" target="_blank" rel="noopener noreferrer" style="color: white;">https://explorehealthcareers.org/career/allied-health-professions/orientation-mobility-specialist/</a></p>
+
+    <h5 style="font-size: 1.2em; color: white;">NEPHROLOGIST</h5>
+    <p>A nephrologist is a doctor who specializes in diagnosing and treating kidney diseases.</p>
+    <p>More can be read at: <a href="https://www.cancer.gov/publications/dictionaries/cancer-terms/def/nephrologist" target="_blank" rel="noopener noreferrer" style="color: white;">https://www.cancer.gov/publications/dictionaries/cancer-terms/def/nephrologist</a></p>
+    
+    <h5 style="font-size: 1.2em; color: white;">NEUROPSYCHOLOGIST</h5>
+    <p>A Neuropsychologist is a psychologist that specializes in treating and diagnosing behavioral problems regarding the brain and its function.</p>
+    <p>More can be read at: <a href="https://www.cancer.gov/publications/dictionaries/cancer-terms/def/nephrologist" target="_blank" rel="noopener noreferrer" style="color: white;">https://www.cancer.gov/publications/dictionaries/cancer-terms/def/nephrologist</a></p>
+
+    <h5 style="font-size: 1.2em; color: white;">OCCUPATIONAL THERAPIST</h5>
+    <p>An occupational therapist helps their client identify and overcome physical, mental, or social difficulties.</p>
+    <p>More can be read at: <a href="https://my.clevelandclinic.org/health/articles/24617-occupational-therapist" target="_blank" rel="noopener noreferrer" style="color: white;">https://my.clevelandclinic.org/health/articles/24617-occupational-therapist</a></p>
+
+    <h5 style="font-size: 1.2em; color: white;">OPTOMETRIST</h5>
+    <p>Optometrists are doctors who specialize in examining, diagnosing, and treating diseases that involve the eye.</p>
+    <p>More can be read at: <a href="https://www.aoa.org/healthy-eyes/whats-a-doctor-of-optometry?sso=y" target="_blank" rel="noopener noreferrer" style="color: white;">https://www.aoa.org/healthy-eyes/whats-a-doctor-of-optometry?sso=y</a></p>
+
+    <h5 style="font-size: 1.2em; color: white;">ORTHODONTIST (CLEFT LIP AND PALATE SPECIALIZATION)</h5>
+    <p>An orthodontist is a specially trained dentist to help diagnose and treat/prevent teeth and jaw irregularities.</p>
+    <p>More can be read at: <a href="https://www.onetonline.org/link/summary/29-1023.00" target="_blank" rel="noopener noreferrer" style="color: white;">https://www.onetonline.org/link/summary/29-1023.00</a></p>
+
+    <h5 style="font-size: 1.2em; color: white;">ORTHOPEDIC SURGEON</h5>
+    <p>An orthopedist is a medical specialist who focuses on injuries regarding the musculoskeletal system.</p>
+    <p>More can be read at: <a href="https://orthoinfo.aaos.org/en/treatment/orthopaedics/" target="_blank" rel="noopener noreferrer" style="color: white;">https://orthoinfo.aaos.org/en/treatment/orthopaedics/</a></p>
+
+    <h5 style="font-size: 1.2em; color: white;">PAIN MANAGEMENT</h5>
+    <p>Pain Management doctors specialize in identifying and treating patients who struggle with pain regarding their injuries, disability, or disease.</p>
+    <p>More can be read at: <a href="https://psadocs.com/what-does-a-pain-management-doctor-do/" target="_blank" rel="noopener noreferrer" style="color: white;">https://psadocs.com/what-does-a-pain-management-doctor-do/</a></p>
+
+    <h5 style="font-size: 1.2em; color: white;">PEDIATRIC CARDIOLOGIST</h5>
+    <p>A pediatric cardiologist specially helps children with heart challenges.</p>
+    <p>More can be read at: <a href="https://www.healthychildren.org/English/family-life/health-management/pediatric-specialists/Pages/What-is-a-Pediatric-Cardiologist.aspx" target="_blank" rel="noopener noreferrer" style="color: white;">https://www.healthychildren.org/English/family-life/health-management/pediatric-specialists/Pages/What-is-a-Pediatric-Cardiologist.aspx</a></p>
+
+    <h5 style="font-size: 1.2em; color: white;">PEDIATRIC CRANIOFACIAL SPECIALIST</h5>
+    <p>Refers to the member of your child's craniofacial team who evaluates, diagnoses, creates a treatment plan, and carries out whatever surgical correction/repair your child's skull, facial skeleton, and all related soft tissues require.</p>
+    <p>More can be read at: <a href="https://www.mayoclinic.org/departments-centers/pediatric-ent/sections/overview/ovc-20466859" target="_blank" rel="noopener noreferrer" style="color: white;">https://www.mayoclinic.org/departments-centers/pediatric-ent/sections/overview/ovc-20466859</a></p>
+    <p>More can be read at: <a href="https://www.craniofacial.net/which-specialist-does-what-terms/" target="_blank" rel="noopener noreferrer" style="color: white;">https://www.craniofacial.net/which-specialist-does-what-terms/</a></p>
+
+    <h5 style="font-size: 1.2em; color: white;">PEDIATRIC DENTIST (CLEFT LIP AND PALATE)</h5>
+    <p>A Pediatric Dentist is a doctor trained specially for removing teeth decay, repairing damaged teeth, and filling cavities in children.</p>
+    <p>More can be read at: <a href="https://www.bls.gov/ooh/healthcare/dentists.htm#tab-1" target="_blank" rel="noopener noreferrer" style="color: white;">https://www.bls.gov/ooh/healthcare/dentists.htm#tab-1</a></p>
+
+    <h5 style="font-size: 1.2em; color: white;">PEDIATRIC ENDOCRINOLOGIST</h5>
+    <p>A Pediatric Endocrinologist helps children who have problems with their growth, puberty, diabetes, or other disorders related to their hormones.</p>
+    <p>More can be read at: <a href="https://www.healthychildren.org/English/family-life/health-management/pediatric-specialists/Pages/What-is-a-Pediatric-Endocrinologist.aspx" target="_blank" rel="noopener noreferrer" style="color: white;">https://www.healthychildren.org/English/family-life/health-management/pediatric-specialists/Pages/What-is-a-Pediatric-Endocrinologist.aspx</a></p>
+
+    <h5 style="font-size: 1.2em; color: white;">PEDIATRIC ENT/OTOLARYNGOLOGIST</h5>
+    <p>A pediatric ENT is a doctor who specializes in diagnosing and treating conditions regarding the ear, nose, and throat in children.</p>
+    <p>More can be read at: <a href="https://swedishcovenant.org/for-patients-and-visitors/medical-services/ear-nose-and-throat-(ent)/pediatric-otolaryngology" target="_blank" rel="noopener noreferrer" style="color: white;">https://swedishcovenant.org/for-patients-and-visitors/medical-services/ear-nose-and-throat-(ent)/pediatric-otolaryngology</a></p>
+
+    <h5 style="font-size: 1.2em; color: white;">PEDIATRIC EPILEPTOLOGIST</h5>
+    <p>Pediatric Epileptologists primarily treat children with epilepsy. However, they are trained to help treat other neurological disorders.</p>
+    <p>More can be read at: <a href="https://www.bswhealth.com/mclane-childrens/specialties/pediatric-epileptology" target="_blank" rel="noopener noreferrer" style="color: white;">https://www.bswhealth.com/mclane-childrens/specialties/pediatric-epileptology</a></p>
+
+    <h5 style="font-size: 1.2em; color: white;">PEDIATRIC INFECTIOUS DISEASE SPECIALIST</h5>
+    <p>Pediatric Infectious Disease Specialists help treat children who have diseases caused by bacteria, fungi, viruses, and or parasites.</p>
+    <p>More can be read at: <a href="https://www.yalemedicine.org/clinical-keywords/pediatric-infectious-diseases" target="_blank" rel="noopener noreferrer" style="color: white;">https://www.yalemedicine.org/clinical-keywords/pediatric-infectious-diseases</a></p>
+
+    <h5 style="font-size: 1.2em; color: white;">PEDIATRIC NEUROLOGIST</h5>
+    <p>A pediatric neurologist is a doctor who treats children who have problems with their nervous system.</p>
+    <p>More can be read at: <a href="https://www.healthychildren.org/English/family-life/health-management/pediatric-specialists/Pages/What-is-a-Child-Neurologist.aspx" target="_blank" rel="noopener noreferrer" style="color: white;">https://www.healthychildren.org/English/family-life/health-management/pediatric-specialists/Pages/What-is-a-Child-Neurologist.aspx</a></p>
+
+    <h5 style="font-size: 1.2em; color: white;">PEDIATRIC OPHTHALMOLOGIST</h5>
+    <p>A pediatric ophthalmologist is a medical or osteopathic doctor who cares for and treats a child who has problems with their eyes.</p>
+    <p>More can be read at: <a href="https://www.aao.org/eye-health/tips-prevention/what-is-ophthalmologist" target="_blank" rel="noopener noreferrer" style="color: white;">https://www.aao.org/eye-health/tips-prevention/what-is-ophthalmologist</a></p>
+
+    <h5 style="font-size: 1.2em; color: white;">PEDIATRIC PSYCHIATRIST</h5>
+    <p>A pediatric Psychiatrist specializes in treating children struggling with disorders regarding their thoughts or emotions.</p>
+    <p>More can be read at: <a href="https://americanbehavioralclinics.com/what-is-pediatric-psychiatry/" target="_blank" rel="noopener noreferrer" style="color: white;">https://americanbehavioralclinics.com/what-is-pediatric-psychiatry/</a></p>
+   
+    <h5 style="font-size: 1.2em; color: white;">PEDIATRIC PLASTIC SURGEON</h5>
+    <p>A Pediatric Plastic Surgeon is able to surgically fix a child’s deformity caused by injury, birth defect, illness, or other causes.</p>
+    <p>More can be read at: <a href="https://www.healthychildren.org/English/family-life/health-management/pediatric-specialists/Pages/What-is-a-Pediatric-Plastic-Surgeon.aspx" target="_blank" rel="noopener noreferrer" style="color: white;">https://www.healthychildren.org/English/family-life/health-management/pediatric-specialists/Pages/What-is-a-Pediatric-Plastic-Surgeon.aspx</a></p>
+
+    <h5 style="font-size: 1.2em; color: white;">PEDIATRIC PULMONOLOGIST</h5>
+    <p>A pediatric pulmonologist specially helps children with lung or breathing difficulties.</p>
+    <p>More can be read at: <a href="https://www.mainehealth.org/Services/Kids-Health/Pediatric-Pulmonology" target="_blank" rel="noopener noreferrer" style="color: white;">https://www.mainehealth.org/Services/Kids-Health/Pediatric-Pulmonology</a></p>
+
+    <h5 style="font-size: 1.2em; color: white;">PHYSICAL THERAPIST</h5>
+    <p>A physical therapist is someone who helps manage and work with an injury that limits the movements of a person’s body to help them gain more accessibility.</p>
+    <p>More can be read at: <a href="https://www.cancer.gov/publications/dictionaries/cancer-terms/def/physical-therapist" target="_blank" rel="noopener noreferrer" style="color: white;">https://www.cancer.gov/publications/dictionaries/cancer-terms/def/physical-therapist</a></p>
+
+    <h5 style="font-size: 1.2em; color: white;">PLAY THERAPIST</h5>
+    <p>A play therapist is used to help children express their emotions through playing with toys rather than using their words.</p>
+    <p>More can be read at: <a href="https://cpt.unt.edu/what-is-play-therapy" target="_blank" rel="noopener noreferrer" style="color: white;">https://cpt.unt.edu/what-is-play-therapy</a></p>
+
+    <h5 style="font-size: 1.2em; color: white;">PODIATRIST</h5>
+    <p>A Podiatrist is a physician or surgeon who treats the foot, ankle, and other related structures of the leg.</p>
+    <p>More can be read at: <a href="https://www.apma.org/podiatristsFAQ" target="_blank" rel="noopener noreferrer" style="color: white;">https://www.apma.org/podiatristsFAQ</a></p>
+
+    <h5 style="font-size: 1.2em; color: white;">READING SPECIALIST</h5>
+    <p>A reading specialist is someone who helps children learn how to read while also implementing strategies to get around the limitations.</p>
+    <p>More can be read at: <a href="https://www.readingrockets.org/article/roles-reading-specialist" target="_blank" rel="noopener noreferrer" style="color: white;">https://www.readingrockets.org/article/roles-reading-specialist</a></p>
+
+    <h5 style="font-size: 1.2em; color: white;">RHEUMATOLOGIST</h5>
+    <p>Rheumatologists are specialists who have been trained to diagnose and treat those with rheumatic diseases. This includes injuries and disorders regarding the musculoskeletal system and autoimmune conditions.</p>
+    <p>More can be read at: <a href="https://www.uchicagomedicine.org/conditions-services/rheumatology" target="_blank" rel="noopener noreferrer" style="color: white;">https://www.uchicagomedicine.org/conditions-services/rheumatology</a></p>
+
+    <h5 style="font-size: 1.2em; color: white;">SPECIALIZED SLEEP DISORDER THERAPIST</h5>
+    <p>A sleep disorder therapist specializes in diagnosing and treating those who have trouble falling or staying asleep.</p>
+    <p>More can be read at: <a href="https://www.dukehealth.org/blog/do-i-need-sleep-specialist" target="_blank" rel="noopener noreferrer" style="color: white;">https://www.dukehealth.org/blog/do-i-need-sleep-specialist</a></p>
+
+    <h5 style="font-size: 1.2em; color: white;">SPEECH LANGUAGE PATHOLOGIST</h5>
+    <p>Speech-language pathologists work with and diagnose people with disorders and disabilities regarding speech.</p>
+    <p>More can be read at: <a href="https://www.asha.org/students/speech-language-pathologists/" target="_blank" rel="noopener noreferrer" style="color: white;">https://www.asha.org/students/speech-language-pathologists/</a></p>
+
+    <h5 style="font-size: 1.2em; color: white;">VISION SPECIALIST</h5>
+    <p>A vision specialist helps someone with low vision optimize their remaining vision. A vision specialist could be an optometrist, ophthalmologist, or a university-trained professional.</p>
+    <p>More can be read at: <a href="https://www.teachingvisuallyimpaired.com/low-vision-specialist.html" target="_blank" rel="noopener noreferrer" style="color: white;">https://www.teachingvisuallyimpaired.com/low-vision-specialist.html</a></p>
+    
+    </body>
+</main>

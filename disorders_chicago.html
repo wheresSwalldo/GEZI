@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C:GEZI-Disorders and Disabilities</title>
+    <link rel="stylesheet" href="styles/style.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+        crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+        crossorigin=""> </script>
+    <style>
+        body {
+            background-color: #333; /* Dark grey background */
+            color: #f8cb26; /* Text color */
+        }
+        h1, h2, h3 {
+            color: #f8cb26; /* Ensure headers also use the text color */
+        }
+        .nav-button {
+            background-color: #444; /* Optional: Button background color */
+            color: #f8cb26; /* Button text color */
+            border: 1px solid #f8cb26;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        .nav-button:hover {
+            background-color: #555; /* Optional: Button hover effect */
+        }
+        #scrollToTopBtn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: none;
+            background-color: #444;
+            color: #f8cb26;
+            border: 1px solid #f8cb26;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        #scrollToTopBtn:hover {
+            background-color: #555;
+        }
+        #banner {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #f8cb26;
+            color: #333;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 1.2em;
+            font-weight: bold;
+            z-index: 1000;
+        }
+        body {
+            padding-top: 50px; /* To prevent content from being hidden under the banner */
+        }
+    </style>
+    
+</head>
+
+<button id="scrollToTopBtn" onclick="scrollToTop()">Top</button>
+<script>
+    const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+    window.onscroll = function() {
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            scrollToTopBtn.style.display = "block";
+        } else {
+            scrollToTopBtn.style.display = "none";
+        }
+    };
+
+    function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+</script>
+    <body>
+        <div id="banner">Coming Soon</div>
+        <header> 
+            <hr style="border: 1px solid #f8cb26; width: 80%; margin: 50px auto;">
+            <h1 style="text-align: center; font-size: 4em;">GEZI - Chicago</h1>
+            <h2 style="text-align: center; font-size: 2em;">Disorders and Disabilities List</h2>
+            <hr style="border: 1px solid #f8cb26; width: 80%; margin: 20px auto;">
+        </header>
+
+        <div style="text-align: center; margin-top: 20px;">
+            <button onclick="window.location.href='mainPage_chicago.html'" class="nav-button">Home</button>
+            <button onclick="window.location.href='specialists_chicago.html'" class="nav-button">Specialists and Doctors</button>
+            <button onclick="window.location.href='contact_chicago.html'" class="nav-button">Contact Me</button>
+
+        </div>
+
+<main>
+    <p>* = strongly recommended by professionals</p>
+   
+
+    <h5 style="font-size: 1.2em; color: white;">ANOXIA/HYPOXIA</h1>
+        <p>Anoxia (complete absence of oxygen) and hypoxia (low oxygen) cause damage to the brain and other organs due to inadequate amounts of oxygen reaching them to keep them alive.</p>
+        <p>More can be read at: <a href="https://www.healthline.com/health/anoxia" target="_blank" rel="noopener noreferrer" style="color: white;">https://www.healthline.com/health/anoxia</a></p>
+        <p><strong>SPECIALISTS:</strong></p>
+        <p>Developmental Pediatrician *</p>
+        <p>Developmental Psychologist *</p>
+        <p>Pediatric Neurologist</p>
+        <p>Pediatric Cardiologist</p>
+        <p>Speech Language Pathologist</p>
+        <p>Audiologist</p>
+        <p>Gastroenterologist</p>
+
+    <h5 style="font-size: 1.2em; color: white;">ANXIETY</h5>
+        <p>Anxiety is an emotion that causes increased feelings of tension or worried thoughts. It can also cause physical changes to the body, such as increased blood pressure and rate of breathing.</p>
+        <p>More can be read at: <a href="https://www.apa.org/topics/anxiety" target="_blank" rel="noopener noreferrer" style="color: white;">https://www.apa.org/topics/anxiety</a></p>
+        <p><strong>SPECIALISTS:</strong></p>
+        <p>Developmental Pediatrician *</p>
+        <p>Developmental Psychologist *</p>
+        <p>Play Therapist</p>
+        <p>Occupational Therapist</p>
+        <p>Specialized Sleep Disorder Therapist</p>
+
+    <h5 style="font-size: 1.2em; color: white;">APHASIA</h5>
+        <p>Aphasia is a disorder that results from damage to the parts of the brain that are responsible for language.</p>
+        <p>More can be read at: <a href="https://www.nidcd.nih.gov/health/aphasia" target="_blank" rel="noopener noreferrer" style="color: white;">https://www.nidcd.nih.gov/health/aphasia</a></p>
+        <p><strong>SPECIALISTS:</strong></p>
+        <p>Developmental Pediatrician *</p>
+        <p>Developmental Psychologist *</p>
+        <p>Pediatric Neurologist</p>
+        <p>Speech Language Pathologist</p>
+        <p>Learning Disability Specialist</p>
+
+    <h5 style="font-size: 1.2em; color: white;">APHONIA</h5>
+        <p>Aphonia is the loss of normal voice, causing people to have a hoarse voice, whisper-quiet voice, or sometimes no voice at all.</p>
+        <p>More can be read at: <a href="https://my.clevelandclinic.org/health/diseases/22783" target="_blank" rel="noopener noreferrer" style="color: white;">https://my.clevelandclinic.org/health/diseases/22783</a></p>
+        <p><strong>SPECIALISTS:</strong></p>
+        <p>Developmental Pediatrician *</p>
+        <p>Developmental Psychologist *</p>
+        <p>Speech Language Pathologist</p>
+        <p>Play Therapist</p>
+
+    <h5 style="font-size: 1.2em; color: white;">APRAXIA</h5>
+        <p>Apraxia is the loss of ability to carry out skilled movements and gestures, despite having the physical ability and desire to perform them.</p>
+        <p>More can be read at: <a href="https://www.ninds.nih.gov/health-information/disorders/apraxia" target="_blank" rel="noopener noreferrer" style="color: white;">https://www.ninds.nih.gov/health-information/disorders/apraxia</a></p>
+        <p><strong>SPECIALISTS:</strong></p>
+        <p>Developmental Pediatrician *</p>
+        <p>Developmental Psychologist *</p>
+        <p>Speech Language Pathologist</p>
+        <p>Play Therapist</p>
+        <p>Occupational Therapist</p>
+
+    <h5 style="font-size: 1.2em; color: white;">ARTICULATION DISORDERS</h5>
+        <p>Articulation disorders cause children to not be able to produce speech sounds correctly beyond the age when they should be learned.</p>
+        <p>More can be read at: <a href="https://www.chop.edu/conditions-diseases/speech-sound-disorders-children" target="_blank" rel="noopener noreferrer" style="color: white;">https://www.chop.edu/conditions-diseases/speech-sound-disorders-children</a></p>
+        <p><strong>SPECIALISTS:</strong></p>
+        <p>Developmental Pediatrician *</p>
+        <p>Developmental Psychologist *</p>
+        <p>Speech Language Pathologist</p>
+        <p>Play Therapist</p>
+
+    <h5 style="font-size: 1.2em; color: white;">ASTIGMATISM</h5>
+        <p>Astigmatism is an abnormal curvature of the eye that can cause blurry near or far vision.</p>
+        <p>More can be read at: <a href="https://www.mayoclinic.org/diseases-conditions/astigmatism/symptoms-causes" target="_blank" rel="noopener noreferrer" style="color: white;">https://www.mayoclinic.org/diseases-conditions/astigmatism/symptoms-causes</a></p>
+        <p><strong>SPECIALISTS:</strong></p>
+        <p>Developmental Pediatrician *</p>
+        <p>Developmental Psychologist *</p>
+        <p>Pediatric Ophthalmologist</p>
+        <p>Vision Specialist</p>
+        <p>Braille Teacher</p>
+        <p>Mobility Specialist</p>
+        <p>Occupational Therapist</p>
+        <p>Pediatric Neurologist</p>
+
+    <h5 style="font-size: 1.2em; color: white;">ATTENTION DEFICIT HYPERACTIVITY DISORDER (ADHD)</h5>
+        <p>Attention Deficit/Hyperactivity Disorder (ADHD) may cause difficulty with controlling impulsive behaviors, becoming overly active, or having trouble paying attention.</p>
+        <p>More can be read at: <a href="https://www.cdc.gov/ncbddd/adhd/facts.html" target="_blank" rel="noopener noreferrer" style="color: white;">https://www.cdc.gov/ncbddd/adhd/facts.html</a></p>
+        <p><strong>SPECIALISTS:</strong></p>
+        <p>Developmental Pediatrician *</p>
+        <p>Developmental Psychologist *</p>
+        <p>Occupational Therapist</p>
+        <p>Speech Language Pathologist</p>
+        <p>Reading Specialist</p>
+
+    <h5 style="font-size: 1.2em; color: white;">AUDITORY PROCESSING DISORDER (APD)</h5>
+        <p>Auditory Processing Disorder (APD) is a hearing disorder that causes difficulty in understanding what is heard because the ears and brain do not communicate normally.</p>
+        <p>More can be read at: <a href="https://kidshealth.org/en/parents/central-auditory.html" target="_blank" rel="noopener noreferrer" style="color: white;">https://kidshealth.org/en/parents/central-auditory.html</a></p>
+        <p><strong>SPECIALISTS:</strong></p>
+        <p>Developmental Pediatrician *</p>
+        <p>Developmental Psychologist *</p>
+        <p>Audiologist</p>
+        <p>Speech Language Pathologist</p>
+
+    <h5 style="font-size: 1.2em; color: white;">AUTISM SPECTRUM DISORDER (ASD; Social Communication Disorder)</h5>
+        <p>Autism spectrum disorder (ASD) is a developmental disability which causes difficulties in social communication or restricted or repetitive behaviors. Patients may also have different ways of learning or moving.</p>
+        <p>More can be read at: <a href="https://www.cdc.gov/ncbddd/autism/facts.html" target="_blank" rel="noopener noreferrer" style="color: white;">https://www.cdc.gov/ncbddd/autism/facts.html</a></p>
+        <p><strong>SPECIALISTS:</strong></p>
+        <p>Developmental Pediatrician *</p>
+        <p>Developmental Psychologist *</p>
+        <p>Speech Language Pathologist</p>
+        <p>Occupational Therapist</p>
+        <p>Executive Functioning Specialist</p>
+        <p>Physical Therapist</p>
+        <p>Play Therapist</p>
+        <p>Assistive Technology Specialist</p>
+        <p>Reading Specialist</p>
+
+    <h5 style="font-size: 1.2em; color: white;">BATTERED CHILD DISORDER</h5>
+        <p>Battered Child Disorder is a constellation of injuries a child experiences as a result of repeated physical abuse.</p>
+        <p>More can be read at: <a href="https://www.ojp.gov/pdffiles1/ojjdp/161406.pdf" target="_blank" rel="noopener noreferrer" style="color: white;">https://www.ojp.gov/pdffiles1/ojjdp/161406.pdf</a></p>
+        <p><strong>SPECIALISTS:</strong></p>
+        <p>Developmental Pediatrician *</p>
+        <p>Developmental Psychologist *</p>
+        <p>Specialized Sleep Disorder Therapist</p>
+
+    <h5 style="font-size: 1.2em; color: white;">BIPOLAR DISORDER</h5>
+        <p>Bipolar disorder, formerly known as manic depression, is a mental illness that causes extreme mood swings, ranging from a very high energy and euphoric mood to a depressed and hopeless state. These mood swings often affect sleep, energy, behavior, and thinking abilities.</p>
+        <p>More can be read at: <a href="https://www.mayoclinic.org/diseases-conditions/bipolar-disorder/symptoms-causes/syc-20355955" target="_blank" rel="noopener noreferrer" style="color: white;">https://www.mayoclinic.org/diseases-conditions/bipolar-disorder/symptoms-causes/syc-20355955</a></p>
+        <p><strong>SPECIALISTS:</strong></p>
+        <p>Developmental Pediatrician *</p>
+        <p>Developmental Psychologist *</p>
+        <p>Play Therapist</p>
+        <p>Occupational Therapist</p>
+        <p>Specialized Sleep Disorder Therapist</p>
+
+    <h5 style="font-size: 1.2em; color: white;">BLINDNESS</h5>
+        <p>Blindness is being unable to see. This may include normal eye function with the inability to open one’s eyes, as well as being able to discern light, while still needing a guide dog.</p>
+        <p>More can be read at: <a href="https://nfb.org/sites/default/files/images/nfb/publications/fr/fr19/fr05si03.htm" target="_blank" rel="noopener noreferrer" style="color: white;">https://nfb.org/sites/default/files/images/nfb/publications/fr/fr19/fr05si03.htm</a></p>
+        <p><strong>SPECIALISTS:</strong></p>
+        <p>Developmental Pediatrician *</p>
+        <p>Developmental Psychologist *</p>
+        <p>Pediatric Ophthalmologist</p>
+        <p>Vision Specialist</p>
+        <p>Braille Teacher</p>
+        <p>Mobility Specialist</p>
+        <p>Occupational Therapist</p>
+        <p>Pediatric Neurologist</p>
+
+    <h5 style="font-size: 1.2em; color: white;">BRAIN DAMAGE</h5>
+        <p>Brain damage occurs after the head sustains an injury that may permanently or temporarily impact the brain’s ability to function properly.</p>
+        <p>More can be read at: <a href="https://www.ninds.nih.gov/health-information/disorders/traumatic-brain-injury-tbi" target="_blank" rel="noopener noreferrer" style="color: white;">https://www.ninds.nih.gov/health-information/disorders/traumatic-brain-injury-tbi</a></p>
+        <p><strong>SPECIALISTS:</strong></p>
+        <p>Developmental Pediatrician *</p>
+        <p>Developmental Psychologist *</p>
+        <p>Pediatric Neurologist</p>
+
+    <h5 style="font-size: 1.2em; color: white;">CATARACTS</h5>
+        <p>Cataracts are foggy or cloudy areas of the lens in the eye which impair vision.</p>
+        <p>More can be read at: <a href="https://www.nei.nih.gov/learn-about-eye-health/eye-conditions-and-diseases/cataracts" target="_blank" rel="noopener noreferrer" style="color: white;">https://www.nei.nih.gov/learn-about-eye-health/eye-conditions-and-diseases/cataracts</a></p>
+        <p><strong>SPECIALISTS:</strong></p>
+        <p>Developmental Pediatrician *</p>
+        <p>Developmental Psychologist *</p>
+        <p>Pediatric Ophthalmologist</p>
+        <p>Vision Specialist</p>
+
+    <h5 style="font-size: 1.2em; color: white;">CENTRAL NERVOUS SYSTEM DYSFUNCTION</h5>
+        <p>Central Nervous System Dysfunction can result from infections, degeneration, vascular disorders, structural disorders, functional disorders, and autoimmune disorders.</p>
+        <p>More can be read at: <a href="https://www.urmc.rochester.edu/encyclopedia/content.aspx?ContentTypeID=85&ContentID=P00799" target="_blank" rel="noopener noreferrer" style="color: white;">https://www.urmc.rochester.edu/encyclopedia/content.aspx?ContentTypeID=85&ContentID=P00799</a></p>
+        <p><strong>SPECIALISTS:</strong></p>
+        <p>Developmental Pediatrician *</p>
+        <p>Developmental Psychologist *</p>
+        <p>Speech Language Pathologist</p>
+        <p>Assistive Device Specialist</p>
+        <p>Physical Therapist</p>
+        <p>Orthopedic Surgeon</p>
+        <p>Occupational Therapist</p>
+
+    <h5 style="font-size: 1.2em; color: white;">CEREBRAL PALSY</h5>
+        <p>Cerebral Palsy is a disorder that affects one’s ability to move or maintain balance/posture. CP is caused by abnormal brain development or damage to the brain that affects the person’s control over their muscles.</p>
+        <p>More can be read at: <a href="https://www.cdc.gov/ncbddd/cp/facts.html" target="_blank" rel="noopener noreferrer" style="color: white;">https://www.cdc.gov/ncbddd/cp/facts.html</a></p>
+        <p><strong>SPECIALISTS:</strong></p>
+        <p>Developmental Pediatrician *</p>
+        <p>Developmental Psychologist *</p>
+        <p>Pediatric Neurologist</p>
+        <p>Speech Language Pathologist</p>
+        <p>Learning Disability Specialist</p>
+        <p>Assistive Device Specialist</p>
+        <p>Physical Therapist</p>
+        <p>Orthopedic Surgeon</p>
+        <p>Occupational Therapist</p>
+
+    <h5 style="font-size: 1.2em; color: white;">CLEFT LIP</h5>
+        <p>Cleft lip occurs when the tissue that makes up the lip does not connect completely before the birth of a child. This results in a defect ranging from a small slit to a large opening that extends from the upper lip into the nose.</p>
+        <p>More can be read at: <a href="https://www.cdc.gov/ncbddd/birthdefects/cleftlip.html" target="_blank" rel="noopener noreferrer" style="color: white;">https://www.cdc.gov/ncbddd/birthdefects/cleftlip.html</a></p>
+        <p><strong>SPECIALISTS:</strong></p>
+        <p>Developmental Pediatrician *</p>
+        <p>Developmental Psychologist *</p>
+        <p>Pediatric Craniofacial Specialist</p>
+        <p>Audiologist</p>
+        <p>Speech Language Pathologist</p>
+        <p>Occupational Therapist</p>
+        <p>Pediatric Dentist</p>
+        <p>Orthodontist</p>
+        <p>Learning Disability Specialist</p>
+        <p>Pediatric Pulmonologist</p>
+        <p>Pediatric Cardiologist</p>
+
+    <h5 style="font-size: 1.2em; color: white;">CLEFT PALATE</h5>
+        <p>Cleft palate occurs when the tissue that makes up the roof of the mouth does not connect completely during pregnancy. For some infants, the front and back parts of the palate are open. For others, only part of the palate is open.</p>
+        <p>More can be read at: <a href="https://www.cdc.gov/ncbddd/birthdefects/cleftlip.html" target="_blank" rel="noopener noreferrer" style="color: white;">https://www.cdc.gov/ncbddd/birthdefects/cleftlip.html</a></p>
+        <p><strong>SPECIALISTS:</strong></p>
+        <p>Developmental Pediatrician *</p>
+        <p>Developmental Psychologist *</p>
+        <p>Pediatric Craniofacial Specialist</p>
+        <p>Audiologist</p>
+        <p>Speech Language Pathologist</p>
+        <p>Occupational Therapist</p>
+        <p>Pediatric Dentist</p>
+        <p>Orthodontist</p>
+        <p>Learning Disability Specialist</p>
+        <p>Pediatric Pulmonologist</p>
+        <p>Pediatric Cardiologist</p>
+
+    <h5 style="font-size: 1.2em; color: white;">COCHLEAR IMPLANTS</h5>
+        <p>Cochlear Implants are small devices that are implanted in the ear to enhance the ability to hear.</p>
+        <p>More can be read at: <a href="https://www.nidcd.nih.gov/health/cochlear-implants" target="_blank" rel="noopener noreferrer" style="color: white;">https://www.nidcd.nih.gov/health/cochlear-implants</a></p>
+        <p><strong>SPECIALISTS:</strong></p>
+        <p>Developmental Pediatrician *</p>
+        <p>Developmental Psychologist *</p>
+        <p>Audiologist</p>
+        <p>Speech Language Pathologist</p>
+        <p>Deaf/Hard of Hearing Teacher (DHH)</p>
+        <p>Pediatric ENT</p>
+
+    <h5 style="font-size: 1.2em; color: white;">CONDUCT DISORDER (CD)</h5>
+        <p>Conduct Disorder refers to repetitive behavioral and emotional difficulties in children.</p>
+        <p>More can be read at: <a href="https://www.aacap.org/aacap/families_and_youth/facts_for_families/fff-guide/conduct-disorder-033.aspx" target="_blank" rel="noopener noreferrer" style="color: white;">https://www.aacap.org/aacap/families_and_youth/facts_for_families/fff-guide/conduct-disorder-033.aspx</a></p>
+        <p><strong>SPECIALISTS:</strong></p>
+        <p>Developmental Pediatrician *</p>
+        <p>Developmental Psychologist *</p>
+        <p>Play Therapist</p>
+        <p>Occupational Therapist</p>  
+
+    <h5 style="font-size: 1.2em; color: white;">CONGENITAL MALFORMATIONS</h5>
+        <p>Congenital Malformations, also known as birth defects, refer to the alterations in the structure or function of different organ systems of a newborn.</p>
+        <p>More can be read at: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9059225" target="_blank" rel="noopener noreferrer" style="color: white;">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9059225</a></p>
+        <p><strong>SPECIALISTS:</strong></p>
+        <p>Developmental Pediatrician *</p>
+        <p>Developmental Psychologist *</p>
+        <p>Pediatric Plastic Surgeon</p>
+        <p>Audiologist</p>
+        <p>Speech Language Pathologist</p>
+        <p>Occupational Therapist</p>
+
+    <h5 style="font-size: 1.2em; color: white;">CYSTIC FIBROSIS (CF)</h5>
+        <p>Cystic Fibrosis (CF) is a genetic condition that affects one of the body’s proteins that is active in the glands that make sweat and mucus. Organs, such as the lungs and pancreas, can be damaged by the abnormal mucus.</p>
+        <p>More can be read at: <a href="https://www.nhlbi.nih.gov/health/cystic-fibrosis" target="_blank" rel="noopener noreferrer" style="color: white;">https://www.nhlbi.nih.gov/health/cystic-fibrosis</a></p>
+        <p><strong>SPECIALISTS:</strong></p>
+        <p>Developmental Pediatrician *</p>
+        <p>Developmental Psychologist *</p>
+        <p>Pediatric Cardiologist</p>
+        <p>Pediatric Pulmonologist</p>
+        <p>Pediatric Respiratory Therapist</p>
+
+    <h5 style="font-size: 1.2em; color: white;">CYTOMEGALOVIRUS (CMV)</h5>
+        <p>Cytomegalovirus (CMV) is a common illness whose symptoms are similar to those of a cold. Babies born with CMV may rarely have long-term health problems, such as hearing loss, vision loss, and developmental and motor delay.</p>
+        <p>More can be read at: <a href="https://www.cdc.gov/cmv/overview.html" target="_blank" rel="noopener noreferrer" style="color: white;">https://www.cdc.gov/cmv/overview.html</a></p>
+        <p><strong>SPECIALISTS:</strong></p>
+        <p>Developmental Pediatrician *</p>
+        <p>Developmental Psychologist *</p>
+        <p>Pediatric Infectious Disease Specialist</p>
+        <p>Speech Language Pathologist</p>
+        <p>Pediatric Otolaryngologist</p>
+        <p>Pediatric Ophthalmologist</p>
+        <p>Pediatric Neurologist</p>
+        <p>Reading Specialist</p>
+        <p>Audiologist</p>
+        <p>Deaf/Hard of Hearing Teacher (DHH)</p>
+        <p>Pediatric ENT</p>
+
+    <h5 style="font-size: 1.2em; color: white;">DEAFNESS</h5>
+        <p>Deafness is an extreme example of hearing loss where a person can hear hardly anything or can’t hear anything at all. Patients with deafness are able to hear a few sounds, but not understand speech.</p>
+        <p>More can be read at: <a href="https://www.ncbi.nlm.nih.gov/books/NBK279527/" target="_blank" rel="noopener noreferrer" style="color: white;">https://www.ncbi.nlm.nih.gov/books/NBK279527/</a></p>
+        <p><strong>SPECIALISTS:</strong></p>
+        <p>Developmental Pediatrician *</p>
+        <p>Developmental Psychologist *</p>
+        <p>Audiologist</p>
+        <p>Speech Language Pathologist</p>
+        <p>Deaf/Hard of Hearing Teacher (DHH)</p>
+        <p>Pediatric ENT</p>
+
+    <h5 style="font-size: 1.2em; color: white;">DEPRESSION</h5>
+        <p>Depression is a common mental illness that affects the way a person thinks, feels, or acts. The most common symptom of depression is a feeling of deep sadness or loss of interest in activities that were previously enjoyed.</p>
+        <p>More can be read at: <a href="https://www.psychiatry.org/patients-families/depression/what-is-depression" target="_blank" rel="noopener noreferrer" style="color: white;">https://www.psychiatry.org/patients-families/depression/what-is-depression</a></p>
+        <p><strong>SPECIALISTS:</strong></p>
+        <p>Developmental Pediatrician *</p>
+        <p>Developmental Psychologist *</p>
+        <p>Play Therapist</p>
+        <p>Occupational Therapist</p>
+        <p>Specialized Sleep Disorder Therapist</p>
+
+    <h5 style="font-size: 1.2em; color: white;">DEVELOPMENTAL DELAY/PERVASIVE DEVELOPMENTAL DISORDER (PDD)</h5>
+        <p>A child with a developmental delay is unable to reach milestones at the normal age.</p>
+        <p>More can be read at: <a href="https://www.yalemedicine.org/conditions/developmental-delay" target="_blank" rel="noopener noreferrer" style="color: white;">https://www.yalemedicine.org/conditions/developmental-delay</a></p>
+        <p><strong>SPECIALISTS:</strong></p>
+        <p>Developmental Pediatrician *</p>
+        <p>Developmental Psychologist *</p>
+        <p>Speech Language Pathologist</p>
+        <p>Physical Therapist</p>
+        <p>Occupational Therapist</p>
+        <p>Play Therapist</p>
+        <p>Pediatric ENT</p>
+        <p>Pediatric Neurologist</p>           
+
+    <h5 style="font-size: 1.2em; color: white;">DIABETES</h5>
+        <p>Diabetes is a chronic metabolic disease that increases a person’s blood sugar level. Over time, this leads to serious damage to the heart, eyes, kidneys, and blood vessels.</p>
+        <p>More can be read at: <a href="https://www.who.int/health-topics/diabetes" target="_blank" rel="noopener noreferrer" style="color: white;">https://www.who.int/health-topics/diabetes</a></p>
+        <p><strong>SPECIALISTS:</strong></p>
+        <p>Developmental Pediatrician *</p>
+        <p>Developmental Psychologist *</p>
+        <p>Pediatric Endocrinologist</p>
+        <p>Podiatrist</p>
+        <p>Dietitian/Nutritionist</p>
+        <p>Pediatric Ophthalmologist</p>
+        <p>Nephrologist</p>
+        <p>Pediatric Cardiologist</p>
+        <p>Pediatric Neurologist</p>
+        <p>Pediatric Psychiatrist</p>
+
+    <h5 style="font-size: 1.2em; color: white;">DOWN SYNDROME</h5>
+        <p>Down Syndrome occurs when a child is born with an extra chromosome 21, which leads to abnormalities in brain and body development.</p>
+        <p>More can be read at: <a href="https://www.cdc.gov/ncbddd/birthdefects/downsyndrome.html" target="_blank" rel="noopener noreferrer" style="color: white;">https://www.cdc.gov/ncbddd/birthdefects/downsyndrome.html</a></p>
+        <p><strong>SPECIALISTS:</strong></p>
+        <p>Developmental Pediatrician *</p>
+        <p>Developmental Psychologist *</p>
+        <p>Pediatric Craniofacial Specialist</p>
+        <p>Speech Language Pathologist</p>
+        <p>Occupational Therapist</p>
+        <p>Physical Therapist</p>
+        <p>Pediatric Cardiologist</p>
+        <p>Allergist</p>
+        <p>Augmentative Communication Specialist</p>
+        <p>Audiologist</p>
+        <p>Pediatric Pulmonologist</p>
+        <p>Pediatric Neurologist</p>
+        <p>Dietitian/Nutritionist</p>
+        <p>Reading Specialist</p>
+        <p>Optometrist</p>
+
+    <h5 style="font-size: 1.2em; color: white;">DYSARTHRIA</h5>
+        <p>Dysarthria occurs when a person has difficulty speaking because their muscles used for speech are too weak.</p>
+        <p>More can be read at: <a href="https://www.nhs.uk/conditions/dysarthria" target="_blank" rel="noopener noreferrer" style="color: white;">https://www.nhs.uk/conditions/dysarthria</a></p>
+        <p><strong>SPECIALISTS:</strong></p>
+        <p>Developmental Pediatrician *</p>
+        <p>Developmental Psychologist *</p>
+        <p>Speech Language Pathologist</p>
+        <p>Pediatric Neurologist</p>
+
+    <h5 style="font-size: 1.2em; color: white;">DYSLEXIA</h5>
+        <p>Dyslexia is a learning disorder that affects a person’s skills involving accurate word reading and spelling. People with dyslexia may have difficulties with phonological awareness, verbal memory, and verbal processing speed.</p>
+        <p>More can be read at: <a href="https://www.bdadyslexia.org.uk/dyslexia/about-dyslexia/what-is-dyslexia" target="_blank" rel="noopener noreferrer" style="color: white;">https://www.bdadyslexia.org.uk/dyslexia/about-dyslexia/what-is-dyslexia</a></p>
+        <p><strong>SPECIALISTS:</strong></p>
+        <p>Neuropsychologist</p>
+        <p>Reading Specialist</p>
+        <p>Speech Language Pathologist</p>
+
+    <h5 style="font-size: 1.2em; color: white;">EATING DISORDERS</h5>
+        <p>Eating disorders are potentially-fatal illnesses that are associated with eating behaviors and related thoughts and emotions.</p>
+        <p>More can be read at: <a href="https://www.nimh.nih.gov/health/topics/eating-disorders" target="_blank" rel="noopener noreferrer" style="color: white;">https://www.nimh.nih.gov/health/topics/eating-disorders</a></p>
+        <p><strong>SPECIALISTS:</strong></p>
+        <p>Developmental Pediatrician *</p>
+        <p>Developmental Psychologist *</p>
+        <p>Dietitian/Nutritionist</p>
+        <p>Pediatric Cardiologist</p>
+
+    <h5 style="font-size: 1.2em; color: white;">ECHOLALIA</h5>
+        <p>Echolalia is the repetition of meaningless words or phrases, commonly during language development in toddlers. However, it also can be associated with Autism Spectrum Disorder.</p>
+        <p>More can be read at: <a href="https://www.ncbi.nlm.nih.gov/books/NBK565908/" target="_blank" rel="noopener noreferrer" style="color: white;">https://www.ncbi.nlm.nih.gov/books/NBK565908/</a></p>
+        <p><strong>SPECIALISTS:</strong></p>
+        <p>Developmental Pediatrician *</p>
+        <p>Developmental Psychologist *</p>
+        <p>Speech Language Pathologist</p>
+        <p>Pediatric Neurologist</p>
+
+    <h5 style="font-size: 1.2em; color: white;">ENCEPHALITIS</h5>
+        <p>Encephalitis is the inflammation of brain tissue caused by infection or an autoimmune response. Inflammation leads to brain swelling, which can lead to confusion and seizures.</p>
+        <p>More can be read at: <a href="https://www.hopkinsmedicine.org/health/conditions-and-diseases/encephalitis" target="_blank" rel="noopener noreferrer" style="color: white;">https://www.hopkinsmedicine.org/health/conditions-and-diseases/encephalitis</a></p>
+        <p><strong>SPECIALISTS:</strong></p>
+        <p>Developmental Pediatrician *</p>
+        <p>Developmental Psychologist *</p>
+        <p>Pediatric Neurologist</p>
+        <p>Rheumatologist</p>
+        <p>Immunologist</p>
+
+    <h5 style="font-size: 1.2em; color: white;">EPILEPSY</h5>
+        <p>Epilepsy is a brain disorder characterized by recurrent seizures.</p>
+        <p>More can be read at: <a href="https://www.mayoclinic.org/diseases-conditions/epilepsy/symptoms-causes/syc-20350093" target="_blank" rel="noopener noreferrer" style="color: white;">https://www.mayoclinic.org/diseases-conditions/epilepsy/symptoms-causes/syc-20350093</a></p>
+        <p><strong>SPECIALISTS:</strong></p>
+        <p>Developmental Pediatrician *</p>
+        <p>Developmental Psychologist *</p>
+        <p>Pediatric Epileptologist</p>
+        <p>Pediatric Neurologist</p>
+        <p>Dietitian/Nutritionist</p>
+
+    <h5 style="font-size: 1.2em; color: white;">EXPRESSIVE LANGUAGE DISORDER</h5>
+        <p>Expressive Language Disorder impairs one’s ability to use language. Patients understand what others are saying, but have difficulty expressing their own ideas when speaking.</p>
+        <p>More can be read at: <a href="https://www.understood.org/en/articles/what-is-expressive-language-disorder" target="_blank" rel="noopener noreferrer" style="color: white;">https://www.understood.org/en/articles/what-is-expressive-language-disorder</a></p>
+        <p><strong>SPECIALISTS:</strong></p>
+        <p>Developmental Pediatrician *</p>
+        <p>Developmental Psychologist *</p>
+        <p>Speech Language Pathologist</p>
+        <p>Audiologist</p>
+
+    <h5 style="font-size: 1.2em; color: white;">FARSIGHTEDNESS</h5>
+        <p>Farsightedness, also known as hyperopia, is a common vision disorder where faraway objects can be seen clearly, but nearby objects may be blurry.</p>
+        <p>More can be read at: <a href="https://www.mayoclinic.org/diseases-conditions/farsightedness/symptoms-causes/syc-20372495" target="_blank" rel="noopener noreferrer" style="color: white;">https://www.mayoclinic.org/diseases-conditions/farsightedness/symptoms-causes/syc-20372495</a></p>
+        <p><strong>SPECIALISTS:</strong></p>
+        <p>Developmental Pediatrician *</p>
+        <p>Developmental Psychologist *</p>
+        <p>Pediatric Ophthalmologist</p>
+        <p>Vision Specialist</p>
+        <p>Braille Teacher</p>
+        <p>Mobility Specialist</p>
+        <p>Occupational Therapist</p>
+        <p>Pediatric Neurologist</p>
+
+    <h5 style="font-size: 1.2em; color: white;">FETAL ALCOHOL SYNDROME</h5>
+        <p>Fetal Alcohol Syndrome is a group of disorders that can affect someone who was exposed to alcohol before birth.</p>
+        <p>More can be read at: <a href="https://www.cdc.gov/ncbddd/fasd/facts.html" target="_blank" rel="noopener noreferrer" style="color: white;">https://www.cdc.gov/ncbddd/fasd/facts.html</a></p>
+        <p><strong>SPECIALISTS:</strong></p>
+        <p>Developmental Pediatrician *</p>
+        <p>Developmental Psychologist *</p>
+        <p>Pediatric Neurologist</p>
+
+    <h5 style="font-size: 1.2em; color: white;">FLUENCY DISORDERS OF SPEECH</h5>
+        <p>A fluency disorder is an interruption of the flow of speech through inconsistencies such as atypical rate and rhythm.</p>
+        <p>More can be read at: <a href="https://www.asha.org/practice-portal/clinical-topics/fluency-disorders/" target="_blank" rel="noopener noreferrer" style="color: white;">https://www.asha.org/practice-portal/clinical-topics/fluency-disorders/</a></p>
+        <p><strong>SPECIALISTS:</strong></p>
+        <p>Developmental Pediatrician *</p>
+        <p>Developmental Psychologist *</p>
+        <p>Speech Language Pathologist</p>
+        <p>Play Therapist</p>
+
+    <h5 style="font-size: 1.2em; color: white;">GLAUCOMA</h5>
+        <p>Glaucoma is an eye disorder that can cause vision loss or blindness by damaging the optic nerve.</p>
+        <p>More can be read at: <a href="https://www.nei.nih.gov/learn-about-eye-health/eye-conditions-and-diseases/glaucoma" target="_blank" rel="noopener noreferrer" style="color: white;">https://www.nei.nih.gov/learn-about-eye-health/eye-conditions-and-diseases/glaucoma</a></p>
+        <p><strong>SPECIALISTS:</strong></p>
+        <p>Developmental Pediatrician *</p>
+        <p>Developmental Psychologist *</p>
+        <p>Pediatric Ophthalmologist</p>
+        <p>Vision Specialist</p>
+        <p>Braille Teacher</p>     
+
+    <h5 style="font-size: 1.2em; color: white;">HEAD INJURY</h5>
+        <p>A head injury is any trauma to the scalp, skull, or brain.</p>
+        <p>More can be read at: <a href="https://www.mountsinai.org/health-library/injury/head-injury-first-aid" target="_blank" rel="noopener noreferrer" style="color: white;">https://www.mountsinai.org/health-library/injury/head-injury-first-aid</a></p>
+        <p><strong>SPECIALISTS:</strong></p>
+        <p>Developmental Pediatrician *</p>
+        <p>Developmental Psychologist *</p>
+        <p>Pediatric Neurologist</p>
+
+    <h5 style="font-size: 1.2em; color: white;">HEARING LOSS</h5>
+        <p>Hearing loss occurs when a person can’t hear the speech or sounds around them normally.</p>
+        <p>More can be read at: <a href="https://www.ncbi.nlm.nih.gov/books/NBK279527/" target="_blank" rel="noopener noreferrer" style="color: white;">https://www.ncbi.nlm.nih.gov/books/NBK279527/</a></p>
+        <p><strong>SPECIALISTS:</strong></p>
+        <p>Developmental Pediatrician *</p>
+        <p>Developmental Psychologist *</p>
+        <p>Audiologist</p>
+        <p>Speech Language Pathologist</p>
+        <p>Deaf/Hard of Hearing Teacher (DHH)</p>
+        <p>Pediatric ENT</p>
+
+    <h5 style="font-size: 1.2em; color: white;">HEMIPLEGIA</h5>
+        <p>Hemiplegia is a disorder characterized by paralysis of one side of the body.</p>
+        <p>More can be read at: <a href="https://my.clevelandclinic.org/health/symptoms/23542-hemiplegia" target="_blank" rel="noopener noreferrer" style="color: white;">https://my.clevelandclinic.org/health/symptoms/23542-hemiplegia</a></p>
+        <p><strong>SPECIALISTS:</strong></p>
+        <p>Developmental Pediatrician *</p>
+        <p>Developmental Psychologist *</p>
+        <p>Pediatric Neurologist</p>
+
+    <h5 style="font-size: 1.2em; color: white;">HEMOPHILIA</h5>
+        <p>Hemophilia is an inherited disorder where the blood does not clot properly, which can cause prolonged, or even spontaneous, bleeding.</p>
+        <p>More can be read at: <a href="https://www.cdc.gov/ncbddd/hemophilia/facts.html" target="_blank" rel="noopener noreferrer" style="color: white;">https://www.cdc.gov/ncbddd/hemophilia/facts.html</a></p>
+        <p><strong>SPECIALISTS:</strong></p>
+        <p>Developmental Pediatrician *</p>
+        <p>Developmental Psychologist *</p>
+        <p>Hematologist</p>
+        <p>Orthopedic Surgeon</p>
+        <p>Physical Therapist</p>
+
+    <h5 style="font-size: 1.2em; color: white;">MUSCULAR DYSTROPHY</h5>
+        <p>Muscular dystrophy is a group of diseases that cause muscles to progressively become weaker or smaller.</p>
+        <p>More can be read at: <a href="https://www.mayoclinic.org/diseases-conditions/muscular-dystrophy/symptoms-causes/syc-20375388" target="_blank" rel="noopener noreferrer" style="color: white;">https://www.mayoclinic.org/diseases-conditions/muscular-dystrophy/symptoms-causes/syc-20375388</a></p>
+        <p><strong>SPECIALISTS:</strong></p>
+        <p>Developmental Pediatrician *</p>
+        <p>Developmental Psychologist *</p>
+        <p>Pediatric Neurologist</p>
+        <p>Physical Therapist</p>
+        <p>Occupational Therapist</p>
+        <p>Optometrist</p>
+        <p>Audiologist</p>
+        <p>Speech Language Pathologist</p>
+
+    <h5 style="font-size: 1.2em; color: white;">MUSCULOSKELETAL CONDITIONS</h5>
+        <p>Musculoskeletal conditions are typically characterized by pain and limitations in mobility, which often reduces someone’s ability to work and participate in society.</p>
+        <p>More can be read at: <a href="https://www.who.int/news-room/fact-sheets/detail/musculoskeletal-conditions" target="_blank" rel="noopener noreferrer" style="color: white;">https://www.who.int/news-room/fact-sheets/detail/musculoskeletal-conditions</a></p>
+        <p><strong>SPECIALISTS:</strong></p>
+        <p>Developmental Pediatrician *</p>
+        <p>Developmental Psychologist *</p>
+        <p>Pediatric Neurologist</p>
+        <p>Orthopedic Surgeon</p>
+        <p>Physical Therapist</p>
+        <p>Speech Language Therapist</p>
+        <p>Audiologist</p>
+        <p>Occupational Therapist</p>
+        <p>Reading Specialist</p>
+        <p>Learning Disability Specialist</p>
+
+    <h5 style="font-size: 1.2em; color: white;">NEUROLOGICAL IMPAIRMENTS</h5>
+        <p>Neurological Impairments are broadly defined as disorders that affect the brain. This may include epilepsy, learning disabilities, and other social disabilities.</p>
+        <p>More can be read at: <a href="https://dphhs.mt.gov/schoolhealth/chronichealth/neurologicaldisorders" target="_blank" rel="noopener noreferrer" style="color: white;">https://dphhs.mt.gov/schoolhealth/chronichealth/neurologicaldisorders</a></p>
+        <p><strong>SPECIALISTS:</strong></p>
+        <p>Developmental Pediatrician *</p>
+        <p>Developmental Psychologist *</p>
+        <p>Pediatric Neurologist</p>
+        <p>Orthopedic Surgeon</p>
+        <p>Physical Therapist</p>
+        <p>Speech Language Therapist</p>
+        <p>Audiologist</p>
+        <p>Occupational Therapist</p>
+        <p>Reading Specialist</p>
+        <p>Learning Disability Specialist</p>
+
+    <h5 style="font-size: 1.2em; color: white;">OBSESSIVE COMPULSIVE DISORDER (OCD)</h5>
+        <p>Children with Obsessive Compulsive Disorder, also known as OCD, may have thoughts that bother them and make them feel like they have to do something about those thoughts even if their actions do not make sense.</p>
+        <p>More can be read at: <a href="https://www.cdc.gov/childrensmentalhealth/ocd.html" target="_blank" rel="noopener noreferrer" style="color: white;">https://www.cdc.gov/childrensmentalhealth/ocd.html</a></p>
+        <p><strong>SPECIALISTS:</strong></p>
+        <p>Developmental Pediatrician *</p>
+        <p>Developmental Psychologist *</p>
+        <p>Pediatric Psychiatrist</p>
+        <p>Speech Language Pathologist</p>
+        <p>Occupational Therapist</p>
+        <p>Executive Functioning Specialist</p>
+        <p>Physical Therapist</p>
+        <p>Play Therapist</p>
+        <p>Assistive Technology Specialist</p>
+        <p>Reading Specialist</p>
+
+    <h5 style="font-size: 1.2em; color: white;">OPPOSITIONAL DEFIANT DISORDER (ODD)</h5>
+        <p>Children who act out so often that serious problems develop may be diagnosed with Oppositional Defiant Disorder, also known as ODD. Oppositional Defiant Disorder commonly occurs in ages before 8, but no later than 12, years old.</p>
+        <p>More can be read at: <a href="https://www.cdc.gov/childrensmentalhealth/behavior.html#defiant" target="_blank" rel="noopener noreferrer" style="color: white;">https://www.cdc.gov/childrensmentalhealth/behavior.html#defiant</a></p>
+        <p><strong>SPECIALISTS:</strong></p>
+        <p>Developmental Pediatrician *</p>
+        <p>Developmental Psychologist *</p>
+        <p>Pediatric Psychiatrist</p>
+        <p>Play Therapist</p>
+
+    <h5 style="font-size: 1.2em; color: white;">OTOSCLEROSIS</h5>
+        <p>Otosclerosis is a form of abnormal bone growth within the ear that causes hearing loss over time.</p>
+        <p>More can be read at: <a href="https://www.betterhealth.vic.gov.au/health/conditionsandtreatments/ears-otosclerosis" target="_blank" rel="noopener noreferrer" style="color: white;">https://www.betterhealth.vic.gov.au/health/conditionsandtreatments/ears-otosclerosis</a></p>
+        <p><strong>SPECIALISTS:</strong></p>
+        <p>Developmental Pediatrician *</p>
+        <p>Developmental Psychologist *</p>
+        <p>Audiologist</p>
+        <p>Speech Language Pathologist</p>
+        <p>Pediatric ENT (ear)</p>
+        <p>Physical Therapist</p>
+
+    <h5 style="font-size: 1.2em; color: white;">PANIC DISORDER</h5>
+        <p>Panic disorder is characterized by frequent or unexpected panic attacks, characterized by anxiety and overwhelming fear.</p>
+        <p>More can be read at: <a href="https://www.nimh.nih.gov/health/publications/panic-disorder-when-fear-overwhelms" target="_blank" rel="noopener noreferrer" style="color: white;">https://www.nimh.nih.gov/health/publications/panic-disorder-when-fear-overwhelms</a></p>
+        <p><strong>SPECIALISTS:</strong></p>
+        <p>Developmental Pediatrician *</p>
+        <p>Developmental Psychologist *</p>
+        <p>Play Therapist</p>
+        <p>Occupational Therapist</p>
+        <p>Specialized Sleep Disorder Therapist</p>
+
+    <h5 style="font-size: 1.2em; color: white;">PARAPLEGIA</h5>
+        <p>Paraplegia is paralysis of the legs or the lower body, which is typically the result of a spinal injury or other disease.</p>
+        <p>More can be read at: <a href="https://my.clevelandclinic.org/health/symptoms/23984-paraplegia" target="_blank" rel="noopener noreferrer" style="color: white;">https://my.clevelandclinic.org/health/symptoms/23984-paraplegia</a></p>
+        <p><strong>SPECIALISTS:</strong></p>
+        <p>Developmental Pediatrician *</p>
+        <p>Developmental Psychologist *</p>
+        <p>Physical Therapist</p>
+        <p>Occupational Therapist</p>
+
+    <h5 style="font-size: 1.2em; color: white;">PHONOLOGICAL DISORDERS</h5>
+        <p>A phonological disorder causes a child to continue using incorrect speech patterns past the age where they were expected to stop using them.</p>
+        <p>More can be read at: <a href="https://medlineplus.gov/ency/article/001541.htm" target="_blank" rel="noopener noreferrer" style="color: white;">https://medlineplus.gov/ency/article/001541.htm</a></p>
+        <p><strong>SPECIALISTS:</strong></p>
+        <p>Developmental Pediatrician *</p>
+        <p>Developmental Psychologist *</p>
+        <p>Speech Language Pathologist</p>
+        <p>Audiologist</p>
+
+    <h5 style="font-size: 1.2em; color: white;">POLIOMYELITIS</h5>
+        <p>Poliomyelitis, also known as polio, is a highly infectious disease that is caused by a virus. It attacks the nervous system and can lead to paralysis.</p>
+        <p>More can be read at: <a href="https://www.who.int/news-room/fact-sheets/detail/poliomyelitis" target="_blank" rel="noopener noreferrer" style="color: white;">https://www.who.int/news-room/fact-sheets/detail/poliomyelitis</a></p>
+        <p><strong>SPECIALISTS:</strong></p>
+        <p>Developmental Pediatrician *</p>
+        <p>Developmental Psychologist *</p>
+        <p>Physical Therapist</p>
+        <p>Occupational Therapist</p>
+
+    <h5 style="font-size: 1.2em; color: white;">POSTLINGUAL DEAFNESS</h5>
+        <p>Postlingual Deafness is hearing loss that occurs after the acquisition of speech and language.</p>
+        <p>More can be read at: <a href="https://www.cdc.gov/ncbddd/hearingloss/types.html" target="_blank" rel="noopener noreferrer" style="color: white;">https://www.cdc.gov/ncbddd/hearingloss/types.html</a></p>
+        <p><strong>SPECIALISTS:</strong></p>
+        <p>Developmental Pediatrician *</p>
+        <p>Developmental Psychologist *</p>
+        <p>Audiologist</p>
+        <p>Speech Language Pathologist</p>
+        <p>Pediatric ENT</p>
+
+    <h5 style="font-size: 1.2em; color: white;">POST TRAUMATIC STRESS DISORDER (PTSD)</h5>
+        <p>Post Traumatic Stress Disorder, also known as PTSD, is a disorder that results from an experience that was scary or dangerous. Similar noises or movements from the event could trigger a person into remembering the event.</p>
+        <p>More can be read at: <a href="https://www.nimh.nih.gov/health/topics/post-traumatic-stress-disorder-ptsd" target="_blank" rel="noopener noreferrer" style="color: white;">https://www.nimh.nih.gov/health/topics/post-traumatic-stress-disorder-ptsd</a></p>
+        <p><strong>SPECIALISTS:</strong></p>
+        <p>Developmental Pediatrician *</p>
+        <p>Developmental Psychologist *</p>
+        <p>Play Therapist</p>
+        <p>Occupational Therapist</p>
+        <p>Specialized Sleep Disorder Therapist</p>
+
+    <h5 style="font-size: 1.2em; color: white;">PSYCHOTIC BEHAVIOR</h5>
+        <p>Psychotic Behavior can cause someone to have disturbed, confused, or disrupted patterns of thought. They can also have hallucinations or delusions.</p>
+        <p>More can be read at: <a href="https://www.nhsinform.scot/illnesses-and-conditions/mental-health/psychosis" target="_blank" rel="noopener noreferrer" style="color: white;">https://www.nhsinform.scot/illnesses-and-conditions/mental-health/psychosis</a></p>
+        <p><strong>SPECIALISTS:</strong></p>
+        <p>Developmental Pediatrician *</p>
+        <p>Developmental Psychologist *</p>
+        <p>Pediatric Psychiatrist</p>
+        <p>Play Therapist</p>
+        <p>Specialized Sleep Disorder Therapist</p>
+
+    <h5 style="font-size: 1.2em; color: white;">QUADRIPLEGIA</h5>
+        <p>Quadriplegia is paralysis of all the limbs and body from the neck down.</p>
+        <p>More can be read at: <a href="https://my.clevelandclinic.org/health/symptoms/23974-quadriplegia-tetraplegia" target="_blank" rel="noopener noreferrer" style="color: white;">https://my.clevelandclinic.org/health/symptoms/23974-quadriplegia-tetraplegia</a></p>
+        <p><strong>SPECIALISTS:</strong></p>
+        <p>Developmental Pediatrician *</p>
+        <p>Developmental Psychologist *</p>
+        <p>Physical Therapist</p>
+        <p>Occupational Therapist</p>
+
+    <h5 style="font-size: 1.2em; color: white;">RETT’S SYNDROME</h5>
+        <p>Rett’s Syndrome is a rare genetic developmental disorder that primarily affects females and causes progressive loss of motor skills and language.</p>
+        <p>More can be read at: <a href="https://www.mayoclinic.org/diseases-conditions/rett-syndrome/symptoms-causes/syc-20377227" target="_blank" rel="noopener noreferrer" style="color: white;">https://www.mayoclinic.org/diseases-conditions/rett-syndrome/symptoms-causes/syc-20377227</a></p>
+        <p><strong>SPECIALISTS:</strong></p>
+        <p>Developmental Pediatrician *</p>
+        <p>Developmental Psychologist *</p>
+        <p>Pediatric Neurologist</p>
+        <p>Orthopedic Surgeon</p>
+        <p>Specialized Sleep Disorder Therapist</p>
+        <p>Physical Therapist</p>
+        <p>Learning Disability Specialist</p>
+        <p>Speech Language Pathologist</p>
+        <p>Audiologist</p>
+
+    <h5 style="font-size: 1.2em; color: white;">RHEUMATOID ARTHRITIS</h5>
+        <p>Rheumatoid Arthritis is an autoimmune disease that causes painful swelling.</p>
+        <p>More can be read at: <a href="https://www.cdc.gov/arthritis/basics/rheumatoid-arthritis.html" target="_blank" rel="noopener noreferrer" style="color: white;">https://www.cdc.gov/arthritis/basics/rheumatoid-arthritis.html</a></p>
+        <p><strong>SPECIALISTS:</strong></p>
+        <p>Developmental Pediatrician *</p>
+        <p>Developmental Psychologist *</p>
+        <p>Rheumatologist</p>
+        <p>Pain Management</p>
+        <p>Physical Therapist</p>
+        <p>Occupational Therapist</p>
+
+    <h5 style="font-size: 1.2em; color: white;">SCHIZOPHRENIA</h5>
+        <p>Schizophrenia is a brain disorder that can cause delusions, hallucinations, disorganized speech, trouble with thinking, or lack of motivation.</p>
+        <p>More can be read at: <a href="https://www.psychiatry.org/patients-families/schizophrenia/what-is-schizophrenia" target="_blank" rel="noopener noreferrer" style="color: white;">https://www.psychiatry.org/patients-families/schizophrenia/what-is-schizophrenia</a></p>
+        <p><strong>SPECIALISTS:</strong></p>
+        <p>Developmental Pediatrician *</p>
+        <p>Developmental Psychologist *</p>
+        <p>Pediatric Psychiatrist</p>
+        <p>Play Therapist</p>
+        <p>Specialized Sleep Disorder Therapist</p>
+        <p>Dietitian/Nutritionist</p>
+        <p>Occupational Therapist</p>
+
+    <h5 style="font-size: 1.2em; color: white;">SCOLIOSIS</h5>
+        <p>Scoliosis is the abnormal curvature of the spine.</p>
+        <p>More can be read at: <a href="https://www.aans.org/Patients/Neurosurgical-Conditions-and-Treatments/Scoliosis" target="_blank" rel="noopener noreferrer" style="color: white;">https://www.aans.org/Patients/Neurosurgical-Conditions-and-Treatments/Scoliosis</a></p>
+        <p><strong>SPECIALISTS:</strong></p>
+        <p>Developmental Pediatrician *</p>
+        <p>Developmental Psychologist *</p>
+        <p>Physical Therapist</p>
+        <p>Occupational Therapist</p>
+        <p>Orthopedic Surgeon</p>
+
+    <h5 style="font-size: 1.2em; color: white;">SICKLE CELL ANEMIA</h5>
+        <p>Sickle Cell Anemia is an inherited disorder that causes the red blood cells to become rigid and sickle shaped.</p>
+        <p>More can be read at: <a href="https://www.cdc.gov/ncbddd/sicklecell/facts.html" target="_blank" rel="noopener noreferrer" style="color: white;">https://www.cdc.gov/ncbddd/sicklecell/facts.html</a></p>
+        <p><strong>SPECIALISTS:</strong></p>
+        <p>Developmental Pediatrician *</p>
+        <p>Developmental Psychologist *</p>
+        <p>Geneticist</p>
+        <p>Hematologist</p>
+        <p>Pain Management</p>
+        <p>Play Therapist</p>
+
+    <h5 style="font-size: 1.2em; color: white;">SELECTIVE MUTISM</h5>
+        <p>Selective Mutism is an anxiety disorder where a person is unable to speak in certain social situations.</p>
+        <p>More can be read at: <a href="https://www.nhs.uk/mental-health/conditions/selective-mutism" target="_blank" rel="noopener noreferrer" style="color: white;">https://www.nhs.uk/mental-health/conditions/selective-mutism</a></p>
+        <p><strong>SPECIALISTS:</strong></p>
+        <p>Developmental Pediatrician *</p>
+        <p>Developmental Psychologist *</p>
+        <p>Pediatric Psychiatrist</p>
+        <p>Speech Language Pathologist</p>
+        <p>Play Therapist</p>
+        <p>Specialized Sleep Disorder Therapist</p>
+        <p>Dietitian/Nutritionist</p>
+
+    <h5 style="font-size: 1.2em; color: white;">SEPARATION ANXIETY DISORDER</h5>
+        <p>Separation Anxiety Disorder can cause panic attacks when one is left with people that he or she does not know or trust.</p>
+        <p>More can be read at: <a href="https://www.mayoclinic.org/diseases-conditions/separation-anxiety-disorder/symptoms-causes/syc-20377455" target="_blank" rel="noopener noreferrer" style="color: white;">https://www.mayoclinic.org/diseases-conditions/separation-anxiety-disorder/symptoms-causes/syc-20377455</a></p>
+        <p><strong>SPECIALISTS:</strong></p>
+        <p>Developmental Pediatrician *</p>
+        <p>Developmental Psychologist *</p>
+        <p>Pediatric Psychiatrist</p>
+        <p>Speech Language Pathologist</p>
+        <p>Play Therapist</p>
+        <p>Specialized Sleep Disorder Therapist</p>
+        <p>Dietitian/Nutritionist</p>
+
+    <h5 style="font-size: 1.2em; color: white;">SPASTICITY</h5>
+        <p>Spasticity is stiff or rigid muscles. This condition can interfere with walking, speech, or other movements needed for daily living.</p>
+        <p>More can be read at: <a href="https://www.pennmedicine.org/for-patients-and-visitors/patient-information/conditions-treated-a-to-z/spasticity" target="_blank" rel="noopener noreferrer" style="color: white;">https://www.pennmedicine.org/for-patients-and-visitors/patient-information/conditions-treated-a-to-z/spasticity</a></p>
+        <p><strong>SPECIALISTS:</strong></p>
+        <p>Developmental Pediatrician *</p>
+        <p>Developmental Psychologist *</p>
+        <p>Pediatric Neurologist</p>
+        <p>Physical Therapist</p>
+        <p>Occupational Therapist</p>
+
+    <h5 style="font-size: 1.2em; color: white;">SPINA BIFIDA</h5>
+        <p>Spina Bifida is a birth defect where an area of the spinal column doesn’t form properly, leaving a section of the spinal cord exposed through an opening in the back.</p>
+        <p>More can be read at: <a href="https://www.chop.edu/conditions-diseases/spina-bifida" target="_blank" rel="noopener noreferrer" style="color: white;">https://www.chop.edu/conditions-diseases/spina-bifida</a></p>
+        <p><strong>SPECIALISTS:</strong></p>
+        <p>Developmental Pediatrician *</p>
+        <p>Developmental Psychologist *</p>
+        <p>Pediatric Neurologist</p>
+        <p>Orthopedic Surgeon</p>
+        <p>Physical Therapist</p>
+        <p>Occupational Therapist</p>
+        <p>Audiologist</p>
+        <p>Speech Language Pathologist</p>
+        <p>Vision Specialist</p> 
+
+    <h5 style="font-size: 1.2em; color: white;">STUTTERING</h5>
+        <p>Stuttering is a speech disorder that causes one to repeat, block, or prolong a word, syllable, or consonant or vowel sound.</p>
+        <p>More can be read at: <a href="https://www.mayoclinic.org/diseases-conditions/stuttering/symptoms-causes/syc-20353572" target="_blank" rel="noopener noreferrer" style="color: white;">https://www.mayoclinic.org/diseases-conditions/stuttering/symptoms-causes/syc-20353572</a></p>
+        <p><strong>SPECIALISTS:</strong></p>
+        <p>Developmental Pediatrician *</p>
+        <p>Developmental Psychologist *</p>
+        <p>Speech Language Pathologist</p>
+        <p>Pediatric Neurologist</p>
+
+    <h5 style="font-size: 1.2em; color: white;">TAY-SACHS DISEASE</h5>
+        <p>Tay-Sachs Disease is a rare genetic disorder that causes gangliosides to build up to toxic levels in the brain and spinal cord, ultimately affecting the function of the nerve cells.</p>
+        <p>More can be read at: <a href="https://www.mayoclinic.org/diseases-conditions/tay-sachs-disease/symptoms-causes/syc-20378190" target="_blank" rel="noopener noreferrer" style="color: white;">https://www.mayoclinic.org/diseases-conditions/tay-sachs-disease/symptoms-causes/syc-20378190</a></p>
+        <p><strong>SPECIALISTS:</strong></p>
+        <p>Developmental Pediatrician *</p>
+        <p>Developmental Psychologist *</p>
+        <p>Pediatric Neurologist</p>
+        <p>Physical Therapist</p>
+        <p>Occupational Therapist</p>
+        <p>Speech Language Therapist</p>
+        <p>Assistive Device Specialist</p>
+        <p>Vision Specialist</p>
+        <p>Audiologist</p>
+        <p>Pain Management</p>
+
+    <h5 style="font-size: 1.2em; color: white;">TOURETTE'S SYNDROME (TS)</h5>
+        <p>Tourette’s Syndrome causes people to have tics, which can cause involuntary twitches, movements, or repetitive sounds.</p>
+        <p>More can be read at: <a href="https://www.cdc.gov/ncbddd/tourette/index.html" target="_blank" rel="noopener noreferrer" style="color: white;">https://www.cdc.gov/ncbddd/tourette/index.html</a></p>
+        <p><strong>SPECIALISTS:</strong></p>
+        <p>Developmental Pediatrician *</p>
+        <p>Developmental Psychologist *</p>
+        <p>Speech Language Pathologist</p>
+        <p>Occupational Therapist</p>
+        <p>Executive Functioning Specialist</p>
+        <p>Physical Therapist</p>
+        <p>Play Therapist</p>
+        <p>Reading Specialist</p>
+
+    <h5 style="font-size: 1.2em; color: white;">VISUAL IMPAIRMENT</h5>
+        <p>Visual Impairment is a term that professionals use for any loss of vision.</p>
+        <p>More can be read at: <a href="http://ophthalmology.pitt.edu/vision-impairment/what-vision-impairment" target="_blank" rel="noopener noreferrer" style="color: white;">http://ophthalmology.pitt.edu/vision-impairment/what-vision-impairment</a></p>
+        <p><strong>SPECIALISTS:</strong></p>
+        <p>Developmental Pediatrician *</p>
+        <p>Developmental Psychologist *</p>
+        <p>Pediatric Ophthalmologist</p>
+        <p>Vision Specialist</p>
+        <p>Braille Teacher</p>
+        <p>Mobility Specialist</p>
+        <p>Occupational Therapist</p>
+    </body>
+</main>
+<script src="scripts/main.js"></script>
