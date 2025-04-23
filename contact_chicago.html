@@ -126,22 +126,26 @@
         function incrementHelpfulCount() {
             helpfulCount++;
             console.log(`Helpful count: ${helpfulCount}`); // Log the count to the console for your visibility
-        }
-    </script>
-
-    <script>
-        function incrementHelpfulCount() {
-            helpfulCount++;
-            console.log(`Helpful count: ${helpfulCount}`); // Log the count to the console for your visibility
 
             const button = document.getElementById('helpfulButton');
             const parent = button.parentNode;
 
             // Replace the button with plain text
             const thankYouText = document.createElement('span');
-            thankYouText.textContent = `Thank you! ${helpfulCount} other ${helpfulCount === 1 ? 'person has' : 'people have'} found this helpful.`;
+            thankYouText.textContent = "Thank you!";
             thankYouText.style.color = "#f8cb26"; // Match the text color
 
             parent.replaceChild(thankYouText, button);
+
+            // Send an email with the helpful count
+            sendHelpfulCountEmail(helpfulCount);
         }
-    </script>    
+
+        function sendHelpfulCountEmail(count) {
+            const email = "swallcat235@gmail.com";
+            const subject = "Helpful Button Clicked";
+            const body = `The helpful button has been clicked ${count} ${count === 1 ? 'time' : 'times'}.`;
+            const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            window.location.href = mailtoLink;
+        }
+    </script>
