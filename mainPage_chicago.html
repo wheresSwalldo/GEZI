@@ -90,13 +90,30 @@
           attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
       }).addTo(map);
 
-        // Add a marker
-        // const marker = L.marker([41.875019209855985, -87.63987851177876]).addTo(map);
-        // marker.bindPopup("Chicago").openPopup();
-        // marker.on('click', function() {
-        //     marker.openPopup();
-        // });
+        // ALLERGIST
+        const allergistMarker1 = L.marker([41.929426718029944, -87.64221824488617]).addTo(map);
+        allergistMarker1.bindPopup("Chicago Family Asthma & Allergy").openPopup();
+        allergistMarker1.on('click', function() {
+            allergistMarker1.openPopup();
+        });
 
+        const allergistMarker2 = L.marker([41.91953596707422, -87.66074824673603]).addTo(map);
+        allergistMarker2.bindPopup("Premier Allergy, Asthma & Sinus Care").openPopup();
+        allergistMarker2.on('click', function() {
+            allergistMarker2.openPopup();
+        });
+
+        const allergistMarker3 = L.marker([41.953795285285814, -87.75165984488521]).addTo(map);
+        allergistMarker3.bindPopup("Chicago Allergy Center").openPopup();
+        allergistMarker3.on('click', function() {
+            allergistMarker3.openPopup();
+        });
+
+        const allergistMarker4 = L.marker([41.89608160694157, -87.62159574673697]).addTo(map);
+        allergistMarker4.bindPopup("Lurie Children’s Hospital Division of Allergy and Immunology").openPopup();
+        allergistMarker4.on('click', function() {
+            allergistMarker4.openPopup();
+        });
     </script>
 
     <body>
