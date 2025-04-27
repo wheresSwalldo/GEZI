@@ -80,6 +80,43 @@
         <button onclick="window.location.href='contact_chicago.html'" class="nav-button">Contact Me</button>
     </div>
 
+    <div style="text-align: center; margin: 20px;">
+        <input type="text" id="searchBar" placeholder="Search for a location..." style="padding: 10px; width: 50%; border: 1px solid #f8cb26; border-radius: 5px;">
+        <button onclick="filterMarkers('allergist')" class="nav-button">Allergists</button>
+        <button onclick="filterMarkers('specialist')" class="nav-button">Specialists</button>
+    </div>
+
+    <script>
+        const markers = [
+            { type: 'allergist', marker: allergistMarker1, name: "Chicago Family Asthma & Allergy" },
+            { type: 'allergist', marker: allergistMarker2, name: "Premier Allergy, Asthma & Sinus Care" },
+            { type: 'allergist', marker: allergistMarker3, name: "Chicago Allergy Center" },
+            { type: 'allergist', marker: allergistMarker4, name: "Lurie Children’s Hospital Division of Allergy and Immunology" }
+            // Add more markers here with their respective types
+        ];
+
+        function filterMarkers(type) {
+            markers.forEach(item => {
+                if (type === 'all' || item.type === type) {
+                    map.addLayer(item.marker);
+                } else {
+                    map.removeLayer(item.marker);
+                }
+            });
+        }
+
+        document.getElementById('searchBar').addEventListener('input', function () {
+            const query = this.value.toLowerCase();
+            markers.forEach(item => {
+                if (item.name.toLowerCase().includes(query)) {
+                    map.addLayer(item.marker);
+                } else {
+                    map.removeLayer(item.marker);
+                }
+            });
+        });
+    </script>
+    
     <div id="map" style="width: 50%; height: 400px; margin: 20px auto;"></div>
     <script>
         // Initialize the map
