@@ -82,7 +82,8 @@
 
     <div style="text-align: center; margin: 20px;">
         <input type="text" id="searchBar" placeholder="Search for a location..." style="padding: 10px; width: 50%; border: 1px solid #f8cb26; border-radius: 5px;">
-        <button onclick="filterMarkers('allergist')" class="nav-button">Allergists</button>
+        <button onclick="highlightMarkers('allergist')" class="nav-button">Allergists</button>
+        <div id="allergistList" style="margin-top: 20px; color: #f8cb26;"></div>
         <button onclick="filterMarkers('specialist')" class="nav-button">Specialists</button>
     </div>
 
@@ -116,7 +117,7 @@
             });
         });
     </script>
-    
+
     <div id="map" style="width: 50%; height: 400px; margin: 20px auto;"></div>
     <script>
         // Initialize the map
