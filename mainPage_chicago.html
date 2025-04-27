@@ -81,7 +81,6 @@
     </div>
 
     <div style="text-align: center; margin: 20px;">
-        <input type="text" id="searchBar" placeholder="Search for a location..." style="padding: 10px; width: 50%; border: 1px solid #f8cb26; border-radius: 5px;">
         <button onclick="highlightMarkers('allergist')" class="nav-button">Allergists</button>
         <div id="allergistList" style="margin-top: 20px; color: #f8cb26;"></div>
         <button onclick="filterMarkers('specialist')" class="nav-button">Specialists</button>
@@ -96,26 +95,18 @@
             // Add more markers here with their respective types
         ];
 
-        function filterMarkers(type) {
+        function highlightMarkers(type) {
             markers.forEach(item => {
-                if (type === 'all' || item.type === type) {
-                    map.addLayer(item.marker);
-                } else {
-                    map.removeLayer(item.marker);
+                if (item.type === type) {
+                    item.marker.setIcon(L.icon({
+                        iconUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon-red.png',
+                        iconSize: [30, 50], // Slightly bigger size
+                        iconAnchor: [15, 50]
+                    }));
                 }
             });
         }
-
-        document.getElementById('searchBar').addEventListener('input', function () {
-            const query = this.value.toLowerCase();
-            markers.forEach(item => {
-                if (item.name.toLowerCase().includes(query)) {
-                    map.addLayer(item.marker);
-                } else {
-                    map.removeLayer(item.marker);
-                }
-            });
-        });
+    </script>
     </script>
 
     <div id="map" style="width: 50%; height: 400px; margin: 20px auto;"></div>
