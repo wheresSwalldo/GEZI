@@ -86,7 +86,21 @@
         <div id="allergistList" style="margin-top: 20px; color: #f8cb26;"></div>
     </div>
     -->
-
+    <div style="text-align: center; margin: 30px 0;"></div>
+        <input type="text" id="markerSearch" placeholder="Search for marker type (e.g., allergist)" style="padding: 10px; width: 250px; border-radius: 5px; border: 1px solid #f8cb26; color: #333;">
+        <button class="nav-button" onclick="searchMarkers()">Search</button>
+    </div>
+    <script>
+    function searchMarkers() {
+        const query = document.getElementById('markerSearch').value.trim().toLowerCase();
+        if (!query) {
+            // Reset all markers to default if search is empty
+            highlightMarkers('');
+            return;
+        }
+        highlightMarkers(query);
+    }
+    </script>
     <script>
         const markers = [
             { type: 'allergist', marker: allergistMarker1, name: "Chicago Family Asthma & Allergy" },
