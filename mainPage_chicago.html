@@ -113,7 +113,7 @@
                         iconSize: [30, 50],
                         iconAnchor: [15, 50]
                     }));
-                    item.marker.openPopup();
+                    // Do NOT open popup automatically
                 } else {
                     item.marker.setIcon(L.icon({
                         iconUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon.png',
@@ -145,7 +145,7 @@
                         iconSize: [30, 50],
                         iconAnchor: [15, 50]
                     }));
-                    item.marker.openPopup();
+                    // Do NOT open popup automatically
                     if (typeof map !== 'undefined') {
                         map.setView(item.marker.getLatLng(), 13);
                     }
@@ -193,31 +193,31 @@
 
         // ALLERGIST
         const allergistMarker1 = L.marker([41.929426718029944, -87.64221824488617]).addTo(map);
-        allergistMarker1.bindPopup("Chicago Family Asthma & Allergy").openPopup();
+        allergistMarker1.bindPopup("Chicago Family Asthma & Allergy");
         allergistMarker1.on('click', function() {
             allergistMarker1.openPopup();
         });
 
         const allergistMarker2 = L.marker([41.91953596707422, -87.66074824673603]).addTo(map);
-        allergistMarker2.bindPopup("Premier Allergy, Asthma & Sinus Care").openPopup();
+        allergistMarker2.bindPopup("Premier Allergy, Asthma & Sinus Care");
         allergistMarker2.on('click', function() {
             allergistMarker2.openPopup();
         });
 
         const allergistMarker3 = L.marker([41.953795285285814, -87.75165984488521]).addTo(map);
-        allergistMarker3.bindPopup("Chicago Allergy Center").openPopup();
+        allergistMarker3.bindPopup("Chicago Allergy Center");
         allergistMarker3.on('click', function() {
             allergistMarker3.openPopup();
         });
 
         const allergistMarker4 = L.marker([41.89608160694157, -87.62159574673697]).addTo(map);
-        allergistMarker4.bindPopup("Lurie Children’s Hospital Division of Allergy and Immunology").openPopup();
+        allergistMarker4.bindPopup("Lurie Children’s Hospital Division of Allergy and Immunology");
         allergistMarker4.on('click', function() {
             allergistMarker4.openPopup();
         });
     </script>
 
-<script>
+    <script>
     const markers = [
         { type: 'allergist', marker: allergistMarker1, name: "Chicago Family Asthma & Allergy" },
         { type: 'allergist', marker: allergistMarker2, name: "Premier Allergy, Asthma & Sinus Care" },
@@ -233,7 +233,7 @@
                     iconSize: [30, 50], // Slightly bigger size
                     iconAnchor: [15, 50]
                 }));
-                item.marker.openPopup(); // Open popup for highlighted markers
+                // Do NOT open popup automatically
             } else {
                 item.marker.setIcon(L.icon({
                     iconUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon.png',
