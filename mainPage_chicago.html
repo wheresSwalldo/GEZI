@@ -92,6 +92,7 @@
         <input type="text" id="markerSearch" placeholder="Search for specialist name (e.g., Chicago Allergy Center)" style="padding: 10px; width: 300px; border-radius: 5px; border: 1px solid #f8cb26; color: #333;">
         <button class="nav-button" id="markerSearchBtn">Search</button>
         <div id="markerResults" style="margin-top: 20px; color: #f8cb26;"></div>
+        <div id="typeResults" style="margin-top: 10px; color: #f8cb26; font-weight: bold;"></div>
     </div>
     <div id="map" style="width: 50%; height: 400px; margin: 20px auto;"></div>
     <script>
@@ -145,14 +146,28 @@
                     item.marker.closePopup();
                 }
             });
+            // Display marker names of the searched type
+            const typeResultsDiv = document.getElementById('typeResults');
+            if (type && type !== '') {
+                const filtered = markers.filter(item => item.type === type);
+                if (filtered.length > 0) {
+                    typeResultsDiv.innerHTML = "Matching specialists:<br>" + filtered.map(item => item.name).join("<br>");
+                } else {
+                    typeResultsDiv.innerHTML = "No specialists found for this type.";
+                }
+            } else {
+                typeResultsDiv.innerHTML = "";
+            }
         }
 
         function searchMarkers() {
             const query = document.getElementById('markerSearch').value.trim().toLowerCase();
             const resultsDiv = document.getElementById('markerResults');
+            const typeResultsDiv = document.getElementById('typeResults');
             if (!query) {
                 highlightMarkers('');
                 resultsDiv.innerHTML = '';
+                typeResultsDiv.innerHTML = '';
                 return;
             }
             // Search by specialist name (case-insensitive substring match)
@@ -171,9 +186,16 @@
                 resultsDiv.innerHTML = "<b>Results:</b><br>" + found.map((item, idx) =>
                     `<span style="cursor:pointer;text-decoration:underline;" onclick="focusMarkerByName('${item.name.replace(/'/g, "\\'")}')">${item.name}</span>`
                 ).join("<br>");
+                // Display the type and names below the search bar
+                const types = [...new Set(found.map(item => item.type))];
+                typeResultsDiv.innerHTML = types.map(type => {
+                    const names = found.filter(item => item.type === type).map(item => item.name);
+                    return `Type: ${type.charAt(0).toUpperCase() + type.slice(1)}<br>${names.join("<br>")}`;
+                }).join("<br><br>");
             } else {
                 highlightMarkers('');
                 resultsDiv.innerHTML = "Sorry, we don't have that available yet";
+                typeResultsDiv.innerHTML = '';
             }
         }
 
