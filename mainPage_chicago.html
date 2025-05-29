@@ -86,10 +86,32 @@
         <div id="allergistList" style="margin-top: 20px; color: #f8cb26;"></div>
     </div>
     -->
+
     <div style="text-align: center; margin: 30px 0;"></div>
         <input type="text" id="markerSearch" placeholder="Search for marker type (e.g., allergist)" style="padding: 10px; width: 250px; border-radius: 5px; border: 1px solid #f8cb26; color: #333;">
         <button class="nav-button" onclick="searchMarkers()">Search</button>
+        <div id="markerResults" style="margin-top: 20px; color: #f8cb26;"></div>
     </div>
+    <script>
+    function searchMarkers() {
+        const query = document.getElementById('markerSearch').value.trim().toLowerCase();
+        const resultsDiv = document.getElementById('markerResults');
+        if (!query) {
+            highlightMarkers('');
+            resultsDiv.innerHTML = '';
+            return;
+        }
+        const found = markers.filter(item => item.type === query);
+        if (found.length > 0) {
+            highlightMarkers(query);
+            resultsDiv.innerHTML = "<b>Results:</b><br>" + found.map(item => item.name).join("<br>");
+        } else {
+            highlightMarkers('');
+            resultsDiv.innerHTML = "sorry we don't have that available yet";
+        }
+    }
+    </script>
+
     <script>
     function searchMarkers() {
         const query = document.getElementById('markerSearch').value.trim().toLowerCase();
