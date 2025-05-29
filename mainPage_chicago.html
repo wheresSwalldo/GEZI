@@ -104,10 +104,28 @@
         const found = markers.filter(item => item.type === query);
         if (found.length > 0) {
             highlightMarkers(query);
-            resultsDiv.innerHTML = "<b>Results:</b><br>" + found.map(item => item.name).join("<br>");
+            // Display clickable names
+            resultsDiv.innerHTML = "<b>Results:</b><br>" + found.map((item, idx) =>
+                `<span style="cursor:pointer;text-decoration:underline;" onclick="focusMarker('${query}', ${idx})">${item.name}</span>`
+            ).join("<br>");
         } else {
             highlightMarkers('');
-            resultsDiv.innerHTML = "sorry we don't have that available yet";
+            resultsDiv.innerHTML = "Sorry, we don't have that available yet";
+        }
+    }
+
+    // Focus on a specific marker and open its popup
+    function focusMarker(type, idx) {
+        const found = markers.filter(item => item.type === type);
+        if (found[idx]) {
+            // Highlight all markers of this type
+            highlightMarkers(type);
+            // Open popup for the selected marker
+            found[idx].marker.openPopup();
+            // Pan to marker
+            if (typeof map !== 'undefined') {
+                map.setView(found[idx].marker.getLatLng(), 13);
+            }
         }
     }
     </script>
