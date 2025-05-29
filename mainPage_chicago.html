@@ -181,35 +181,6 @@
         highlightMarkers(query);
     }
     </script>
-    <script>
-        const markers = [
-            { type: 'allergist', marker: allergistMarker1, name: "Chicago Family Asthma & Allergy" },
-            { type: 'allergist', marker: allergistMarker2, name: "Premier Allergy, Asthma & Sinus Care" },
-            { type: 'allergist', marker: allergistMarker3, name: "Chicago Allergy Center" },
-            { type: 'allergist', marker: allergistMarker4, name: "Lurie Children’s Hospital Division of Allergy and Immunology" }
-        ];
-
-        function highlightMarkers(type) {
-            markers.forEach(item => {
-                if (item.type === type) {
-                    item.marker.setIcon(L.icon({
-                        iconUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon-red.png',
-                        iconSize: [30, 50], // Slightly bigger size
-                        iconAnchor: [15, 50]
-                    }));
-                    item.marker.openPopup(); // Open popup for highlighted markers
-                } else {
-                    item.marker.setIcon(L.icon({
-                        iconUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon.png',
-                        iconSize: [25, 41], // Default size
-                        iconAnchor: [12, 41]
-                    }));
-                    item.marker.closePopup(); // Close popup for non-highlighted markers
-                }
-            });
-        }
-    </script>
-
     <div id="map" style="width: 50%; height: 400px; margin: 20px auto;"></div>
     <script>
         // Initialize the map
