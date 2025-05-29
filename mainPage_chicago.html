@@ -130,7 +130,8 @@
         const allergistMarker4 = L.marker([41.89608160694157, -87.62159574673697], {icon: blueDotIcon}).addTo(map);
         allergistMarker4.bindPopup("Lurie Children’s Hospital Division of Allergy and Immunology");
 
-        const allergistMarkers = [
+        const allergist_markers = [
+            ...allergistMarkers,
             { type: 'allergist', marker: allergistMarker1, name: "Chicago Family Asthma & Allergy" },
             { type: 'allergist', marker: allergistMarker2, name: "Premier Allergy, Asthma & Sinus Care" },
             { type: 'allergist', marker: allergistMarker3, name: "Chicago Allergy Center" },
@@ -139,7 +140,7 @@
 
         // ASSISTIVE TECHNOLOGY SPECIALIST
         const ATMarker1 = L.marker([41.89744614413956, -87.6379678088783], {icon: blueDotIcon}).addTo(map);
-        AtMarker1.bindPopup("Illinois State Board of Education");
+        ATMarker1.bindPopup("Illinois State Board of Education");
 
         const ATMarker2 = L.marker([41.89412464719986, -87.61827538706557], {icon: blueDotIcon}).addTo(map);
         ATMarker2.bindPopup("Shirley Ryan AbilityLab");
@@ -147,10 +148,12 @@
         const ATMarker3 = L.marker([41.865274776202156, -87.6465727167046], {icon: blueDotIcon}).addTo(map);
         ATMarker3.bindPopup("University of Illinois at Chicago");
 
-        const ATmarkers = [
+        // Add assistive technology markers to the main markers array
+        const AT_markers = [
+            ...ATMarkers,
             { type: 'assistiveTechnology', marker: ATMarker1, name: "Illinois State Board of Education" },
             { type: 'assistiveTechnology', marker: ATMarker2, name: "Shirley Ryan AbilityLab" },
-            { type: 'assistiveTechnology', marker: ATMarker3, name: "University of Illinois at Chicago" },
+            { type: 'assistiveTechnology', marker: ATMarker3, name: "University of Illinois at Chicago" }
         ];
 
         function highlightMarkers(type) {
