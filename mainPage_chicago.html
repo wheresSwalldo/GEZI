@@ -87,9 +87,9 @@
     </div>
     -->
 
-/* SEARCH BAR */
+<!-- SEARCH BAR -->
     <div style="text-align: center; margin: 30px 0;"></div>
-        <input type="text" id="markerSearch" placeholder="Search for specialist type (e.g., allergist)" style="padding: 10px; width: 250px; border-radius: 5px; border: 1px solid #f8cb26; color: #333;">
+        <input type="text" id="markerSearch" placeholder="Search for specialist name (e.g., Chicago Allergy Center)" style="padding: 10px; width: 300px; border-radius: 5px; border: 1px solid #f8cb26; color: #333;">
         <button class="nav-button" id="markerSearchBtn">Search</button>
         <div id="markerResults" style="margin-top: 20px; color: #f8cb26;"></div>
     </div>
@@ -102,12 +102,30 @@
             resultsDiv.innerHTML = '';
             return;
         }
-        const found = markers.filter(item => item.type === query);
+        // Search by specialist name (case-insensitive substring match)
+        const found = markers.filter(item => item.name.toLowerCase().includes(query));
         if (found.length > 0) {
-            highlightMarkers(query);
+            // Highlight only the found markers by name
+            markers.forEach(item => {
+                if (found.includes(item)) {
+                    item.marker.setIcon(L.icon({
+                        iconUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon-red.png',
+                        iconSize: [30, 50],
+                        iconAnchor: [15, 50]
+                    }));
+                    item.marker.openPopup();
+                } else {
+                    item.marker.setIcon(L.icon({
+                        iconUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon.png',
+                        iconSize: [25, 41],
+                        iconAnchor: [12, 41]
+                    }));
+                    item.marker.closePopup();
+                }
+            });
             // Display clickable names
             resultsDiv.innerHTML = "<b>Results:</b><br>" + found.map((item, idx) =>
-                `<span style="cursor:pointer;text-decoration:underline;" onclick="focusMarker('${query}', ${idx})">${item.name}</span>`
+                `<span style="cursor:pointer;text-decoration:underline;" onclick="focusMarkerByName('${item.name.replace(/'/g, "\\'")}')">${item.name}</span>`
             ).join("<br>");
         } else {
             highlightMarkers('');
@@ -115,18 +133,31 @@
         }
     }
 
-    // Focus on a specific marker and open its popup
-    function focusMarker(type, idx) {
-        const found = markers.filter(item => item.type === type);
-        if (found[idx]) {
-            // Highlight all markers of this type
-            highlightMarkers(type);
-            // Open popup for the selected marker
-            found[idx].marker.openPopup();
-            // Pan to marker
-            if (typeof map !== 'undefined') {
-                map.setView(found[idx].marker.getLatLng(), 13);
-            }
+    // Focus on a specific marker by name
+    function focusMarkerByName(name) {
+        const found = markers.find(item => item.name === name);
+        if (found) {
+            // Highlight only this marker
+            markers.forEach(item => {
+                if (item === found) {
+                    item.marker.setIcon(L.icon({
+                        iconUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon-red.png',
+                        iconSize: [30, 50],
+                        iconAnchor: [15, 50]
+                    }));
+                    item.marker.openPopup();
+                    if (typeof map !== 'undefined') {
+                        map.setView(item.marker.getLatLng(), 13);
+                    }
+                } else {
+                    item.marker.setIcon(L.icon({
+                        iconUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon.png',
+                        iconSize: [25, 41],
+                        iconAnchor: [12, 41]
+                    }));
+                    item.marker.closePopup();
+                }
+            });
         }
     }
 
